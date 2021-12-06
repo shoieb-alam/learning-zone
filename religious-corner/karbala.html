@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Karbala </title>
+
+    <!-- Bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/computer-courses.css">
+    <link rel="stylesheet" href="../css/karbala.css">
+
+    <!-- Bengali font  -->
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-religious">
+
+    <header>
+
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../home.php">Learning Zone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../computer-courses/computer-courses.php">Basic Courses </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../courses.php">CS Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../forums-blogs.php">Forums & Blogs </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../religious-corner/religious-corner.php">Islamic Corner</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#login" data-bs-toggle="modal">Log in</a>
+                        </li>
+                        <li class="btn-trial nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#signin" data-bs-toggle="modal">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/ Navigation bar-->
+
+
+
+    <!--Modal box-->
+
+    <!-- login modal -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Login to start your Session</h6>
+                    <form action="../login.php" method="GET">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!-- password  -->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pwd" />
+
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ login modal  -->
+
+    <!-- signin modal  -->
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Sign up to start your Session</h6>
+                    <form method="POST" action="../signup.php">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!----- mail -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="E-mail" type="text" autocomplete="off"
+                                name="email" />
+                        </div>
+
+                        <!----- password -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pass" />
+                        </div>
+
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ signin modal  -->
+
+    <!--/ Modal box-->
+
+
+    <div class="header-bg text-white text-center pt-5">
+        <div class="header-bg-conatainer py-5">
+            <h1 class="pt-5">কারবালা : প্রতিরোধের প্রথম দৃষ্টান্ত </h1>
+            <h4> মাওলানা সাইয়েদ আবুল হাসান আলী নদভী (রহঃ) </h4>
+        </div>
+    </div>
+    <main class="container religious-conatainer fs-5 p-3 mb-5">
+        <p>
+            [১৫ মুহাররম ১৪১২ হি. মোতাবেক ২৮ জুলাই ১৯৯১ ঈ. লক্ষ্ণৌর মাওলানা আব্দুস শাকুর হলে দেওয়া দীর্ঘ ভাষণের একটি অংশ
+            এ লেখাটি। ভাষণটিতে যুক্তিপূর্ণ বিশ্লেষণে খেলাফতে রাশেদার ধারাবাহিকতা এবং হযরত হাসান ও হোসাইন রাযি.-এর
+            পদক্ষেপসমূহের সঠিকতা তুলে ধরা হয়েছে। পুস্তিকাকারে প্রকাশিত ওই ভাষণের ২৯ থেকে ৩৬ পৃষ্ঠার অনুবাদ এখানে পেশ
+            করা হল।]
+        </p>
+
+        <p>
+            আমি এখন আপনাদের বলছি, আল্লাহ তাআলা এই পদ্ধতিতেই আদর্শ ধারাটি চালু রেখেছেন। এ ধারারই পর্যায়ক্রম ছিল হযরত
+            হাসান রাযি. ও হযরত হোসেন রাযি.-এর পদক্ষেপ। পরিষ্কার ভাষায় বলছি, হযরাত হাসানাইন (হাসান ও হোসাইন) রাযি.-এর
+            পদক্ষেপ ছিল আল্লাহ তাআলার নিদর্শনাবলীর অন্তর্ভুক্ত। নবী কারীম সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সঙ্গে আল্লাহ
+            তাআলা যে বিশেষ বিশেষ মুআমালা করেছেন এবং তাঁকে দুনিয়ার সর্বোত্তম যেসব নেয়ামত দান করেছেন, তার মধ্যে এই দুটি
+            ফুলেরও অন্তর্ভুক্তি রয়েছে। তাদেরকে উপাধি দেওয়া হয়েছিল ‘রায়হানাতাই রাসূলিল্লাহ’-রাসূলুল্লাহর দুই ফুল।
+        </p>
+
+        <div class="text-center py-3">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/OYvN3HcDr_Q" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        </div>
+        <p>
+            আমি এখন আপনাদের বলছি, আল্লাহ তাআলা এই পদ্ধতিতেই আদর্শ ধারাটি চালু রেখেছেন। এ ধারারই পর্যায়ক্রম ছিল হযরত
+            হাসান রাযি. ও হযরত হোসেন রাযি.-এর পদক্ষেপ। পরিষ্কার ভাষায় বলছি, হযরাত হাসানাইন (হাসান ও হোসাইন) রাযি.-এর
+            পদক্ষেপ ছিল আল্লাহ তাআলার নিদর্শনাবলীর অন্তর্ভুক্ত। নবী কারীম সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সঙ্গে আল্লাহ
+            তাআলা যে বিশেষ বিশেষ মুআমালা করেছেন এবং তাঁকে দুনিয়ার সর্বোত্তম যেসব নেয়ামত দান করেছেন, তার মধ্যে এই দুটি
+            ফুলেরও অন্তর্ভুক্তি রয়েছে। তাদেরকে উপাধি দেওয়া হয়েছিল ‘রায়হানাতাই রাসূলিল্লাহ’-রাসূলুল্লাহর দুই ফুল।
+        </p>
+
+        <p>
+            إن ابني هذا سيد وسيصلح الله به بين فئتين من المسلمين
+        </p>
+
+        <p>
+            আমার এই ছেলে (বংশধর) নেতা হবে। আশা করি আল্লাহ তাআলা তার মাধ্যমে মুসলমানদের বড় দুটি দলের মধ্যে সন্ধি করিয়ে
+            দেবেন।-আল ইসাবা খন্ড-১ পৃষ্ঠা-২৩০
+
+            এই কথাটি হযরত হাসান রাযি.-এর জন্য কেবল একটি ভবিষ্যত-সংবাদ ছিল না, বরং এটি ছিল নবীজীর পক্ষ থেকে একটি
+            অসিয়্যতও, এবং একটি মনোচাহিদা বা দাবিও। এটি মনোচাহিদা ছিল আল্লাহর রাসূলের, ছিল প্রিয় নানাজীরও। হযরত হাসান
+            রাযি. তাই সেটিকে নিখাঁদ নববী নির্দেশ হিসেবেই গ্রহণ করেছেন এবং সঠিক পদক্ষেপটি নিয়েছেন হযরত মুআবিয়া রাযি.-এর
+            সঙ্গে। যিনি সাহাবী ছিলেন, কাতেবে ওহী ছিলেন এবং তাঁর নিকটাত্মীয়ও ছিলেন। সশস্ত্র অভিযান ও তলোয়ার কোষমুক্ত
+            করার কোনো উপদান তখন ছিল না। মুআবিয়া রাযি.-এর বিরুদ্ধে তাঁর দ্বারা সেনা-অভিযান পরিচালিত হলে অহেতুক রক্তপাত
+            ছাড়া আর কিছুই হত না। অথচ আবেগে-উত্তেজিত কিছু লোক তাকে কটাক্ষ করে বলেছে, এই সন্ধি তো বড়ই লজ্জা ও গ্লানির
+            বিষয়। তখন তিনি প্রশান্ত মনে উত্তর দিয়েছেন-
+        </p>
+
+        <p>
+            العار خير من النار
+        </p>
+
+        <p>
+            অগ্নির চেয়ে লজ্জা ভাল।
+        </p>
+
+        <p>
+            এই ধারা বেয়ে যখন ইয়াযীদের বিয়টি সামনে এল তখন হযরত হোসাইন রাযি.ও শতভাগ সঠিক পদক্ষেপটি নিলেন। কারণ, সেটিই
+            ছিল তাঁর করণীয়। তিনি তা না করলে কেয়ামত পর্যন্ত বিচ্যুত শাসকদের বিরুদ্ধে রুখে দাঁড়ানোর কোনো দৃষ্টান্ত
+            আমাদের সামনে থাকতো না। যখন কোনো ভুল ক্ষমতা প্রতিষ্ঠিত হয়ে যায়, সমাজে অনাচারের ধস নামার অশঙ্কা জেগে উঠে আর
+            ভালোর আহবান ও মন্দের প্রতিরোধ এবং তাকওয়া-তাহারাত জাগানো ও খোদাভীতি ও ইবাদতের প্রতি আগ্রহ সৃষ্টির পরিবর্তে
+            শুরু হয় ভ্রমণ-শিকার ও আমোদ-প্রমোদের প্রতি আকর্ষণ বৃদ্ধির আয়োজন, চলতে থাকে রাষ্ট্র ও ক্ষমতার গলদ ব্যবহার*
+            তখন আমাদের সামনে একটি দৃষ্টান্ত থাকা দরকার হয়ে পড়ে যে, এমন পরিস্থিতিতে আল্লাহর কোনো বান্দা দাঁড়িয়ে
+            গেছেন, এসবের বিরুদ্ধে চ্যালেঞ্জ ছুঁড়ে দিয়েছেন এবং প্রতিরোধে এগিয়ে এসেছেন। যদি এমনটি না ঘটতো তাহলে আপনারা
+            ইসলামের পরবর্তী যুগের ইতিহাসে দুঃশাসকদের ব্যাপারে কেবল সমর্থন ও নীরবতার নমুনাই দেখতে পেতেন। সবাই শুধু এ
+            পংক্তিরই অনুসরণ করত-
+
+            বাতাস যেদিকেই বয়ে যাক
+
+            তুমি এই একদিকেই এগিয়ে চল
+
+            তাদের মনোভাব থাকত এমন যে, যত দুঃশাসনই প্রতিষ্ঠা হোক আর যত দুরাচরী সরকারই ক্ষমতায় আসুক-আমরা শুধু তাদের
+            আনুগত্য করে যাব। এটাই আমাদের তকদীর। কারণ আমাদের সামনে দুঃশাসনের আনুগত্য না করার ক্ষেত্রে কোনো দৃষ্টান্ত নেই।
+            কিছু করার মতো অনুসরণীয় কোনো উদাহরণ নেই। তাছাড়া এ আশংকাও থাকতো যে, এতে ইসলামী ঐক্যের ওপর নেতিবাচক প্রভাব
+            পড়বে। মুসলমানদের সংঘবদ্ধতা পড়ে যাবে ঝুঁকির মুখে। তাই সবাই নীরব দর্শক হয়ে বসে থাকত।
+        </p>
+
+        <p>
+            এজন্যই হযরত হোসাইন রাযি.-এর এই দৃষ্টান্ত স্থাপিত হয়েছে যে, না, এভাবে চলবে না। সবাই চোখবন্ধ আনুগত্য করবে না।
+            বরং কিছু লোকের এমনও হওয়া উচিত যে, এ দুঃসহ পরিস্থিতি মোকাবেলায় পরোয়াহীনভাবে ময়দানে ঝাঁপিয়ে পড়বে। এরই ফল
+            হল, পরের যুগের মুজাহিদদের ইতিহাস। যদি আপনারা পড়ে দেখেন সে ইতিহাস, অধ্যয়ন করেন তাদের মনস্তত্ব ও মানসিকতা।
+            তাদের সংলাপ ও বক্তব্য তাহলে অবশ্যই অনুভব করবেন বিভিন্ন যুগে, বিভিন্ন দেশে যেসব সংস্কারবাদী আন্দোলন সংঘটিত
+            হয়েছে, যেসব বৈপ্লবিক প্রয়াস উচ্চকিত হয়েছে, সেসব কটিরই পেছনে হযরত হোসাইন রাযি.-এর স্থাপিত দৃষ্টান্ত ভূমিকা
+            রেখেছে। আমীর আবদুল কাদের জাযায়েরী, আবদুল করীম রেফী, শায়খ সান্নুসী, শায়খ শামিল দাগিস্তানী অথবা সাইয়েদ
+            আহমদ শহীদ আর শাহ ইসলামইল শহীদ, যার কথাই ধরুন, এদের প্রত্যেকের আত্মবিশ্বাস ও সৎসাহস বাড়িয়ে তোলা আর
+            সংগ্রামের আবেগ ও প্রত্যয় জাগিয়ে তোলার পেছনে ভূমিকা রেখেছিল হযরত হোসাইন-এর এই দৃষ্টান্ত। তারা ওই দৃষ্টান্ত
+            থেকে অনুধাবন করেছেন, এজাতীয় প্রতিরোধ শিশুসুলভ কোনো চাঞ্চল্য নয়, নয় কোনো উত্তেজক ও বিশৃঙ্খলা সৃষ্টিকারী
+            অস্থিরতা। বরং এটি হচ্ছে হোসাইনী সুন্নত। হযরত হোসাইনের আদর্শ-নীতি।
+        </p>
+
+        <p>
+            এ প্রতিরোধের ধারা আমাদের এ যুগেও চালু আছে। খেলাফত আন্দোলনের একটি বড় কেন্দ্র ছিল এই লক্ষ্ণৌ। এ আন্দোলনের
+            যিনি প্রধান নেতা, স্বাধীনতাকামীদের পুরোধা রঈসুল আহরার মাওলানা মুহাম্মদ আলী জওহর, তার অন্তরেও প্রবহমান ছিল
+            হযরত হোসাইন রাযি.কে অনুসরণের আবেগ ও প্রত্যয়। কবিতায় তিনি বলেছেন-
+        </p>
+        <p>
+            যে পয়গাম এসেছিল হোসাইন ইবনে আলীর কাছে/আমি আনন্দিত, সে ওফাদারির পয়গাম এসেছে এখন আমারও জন্য।
+        </p>
+        <p>
+            পরবর্তী সময়ের ইতিহাস আপনারা দেখুন। হযরত হোসাইন রাযি.-এর নাতি ও হযরত যয়নুল আবেদীন রাহ.-এর সাহেবযাদা যায়েদ
+            ইবনে আলী ইবনে হোসাইন যখন হিশাম ইবনে আব্দুল মালেকের (নিঃসন্দেহে যিনি ইয়াযীদের চেয়ে কোনো কোনো ক্ষেত্রে ভালো
+            ছিলেন) মোকাবেলায় রুখে দাঁড়ালেন তখন ইমাম আবু হানিফা রাহ. দশ হাজার দিরহাম-যা ওই যুগের হিসাবে এবং ইমাম আবু
+            হানিফা রাহ.-এর পক্ষ থেকে (একজন মুজতাহিদ ও ফকীহ হিসেবেই যিনি পরিচিত ছিলেন, বড় কোনো পুঁজিপতি ছিলেন না) অনেক
+            বড় অংকের অনুদান ছিল-তার কাছে পাঠালেন এবং বলে দিলেন আপনি এ টাকা কাজে লাগান।’ এর পর হযরত মুহাম্মাদ যুন্নাফস
+            যাকিয়্যা (হযরত হাসান-এর ধারায় হযরত আলী রাযি.-এর পঞ্চম পুরুষ। মুহাম্মাদ যুন্নাফস যাকিয়্যা ইবনে আব্দুল্লাহ
+            আল মহয ইবনে হাসান আল মুসান্না ইবনে হাসান আল মুজতবা ইবনে সাইয়েদুনা আলী মুরতাযা রাযি.) যখন খলিফা মনসুরের
+            মোকাবেলায় (যিনি খলিফা হারুনুর রশীদের দাদা এবং বাগদাদে খেলাফতে আববাসিয়ার প্রতিষ্ঠাতা) রুখে দাঁড়ালেন,
+            ইতিহাস সাক্ষ্য দেয় তখন ইমাম আবু হানিফা রাহ. ও ইমাম মালেক রাহ. তাকে সমর্থন দিয়েছেন এবং আর্থিক সহযোগিতাও
+            করেছেন। তাছাড়া খলিফা মনসুরের সেনাপতি হাসান ইবনে কুহতবাকে ইমাম আবু হানিফা এ কথা বলে নিবৃত্ত করেন যে,
+            মুহাম্মাদ যুন্নাফস যাকিয়্যা ও তার ভাই ইবরাহীমের বিরুদ্ধে অস্ত্র ধরা তোমার জন্য জায়েয হবে না। এরা ছিলেন
+            দু’ভাই। মুহাম্মাদ ইবনে আব্দুল্লাহ (যুন্নাফস) রুখে দাঁড়িয়েছিলেন মদীনায়। হাদীস শরীফে আছে-আমার বংশধরদের
+            মধ্যে যুন্নাফস যাকিয়্যার জন্ম হবে এবং সে মদীনার আহজারে যায়তে শহীদ হবে।’ এ ভবিষ্যদ্বাণী তার ব্যাপারে সত্যে
+            পরিণত হয়েছিল। অপর ভাই ইবরাহীম রুখে দাঁড়িয়েছিলেন বাগদাদে। কিন্তু দিন-তারিখের সমন্বয়ে কিছু অমিল হওয়ায়
+            তারা একসঙ্গে মিলিত হয়ে আন্দোলন গড়ে তুলতে পারেননি। তবে, ইমাম আবু হানিফা রাহ. ও ইমাম মালেক রাহ. দু’জনকেই
+            সমর্থন ও অর্থসহযোগিতা দিয়েছিলেন।
+        </p>
+
+        <p>
+            এখন কেউ যদি আপত্তি উঠিয়ে বলেন, হযরত হোসাইন রাযি., হযরত যায়েদ ইবনে আলী রাহ. ও মুহাম্মদ যুন্নাফস যাকিয়্যার
+            আন্দোলন-সংগ্রাম ও পদক্ষেপগুলো ছিল ইসলামী ঐক্য ও ইসলামী শাসনক্ষমতার বিরুদ্ধে একেকটি অনুত্তম পদক্ষেপ ও
+            অপরিণামদর্শী কান্ড তাহলে তিনি যেন প্রকারান্তরে এটাই বলতে চাচ্ছেন যে, তিনি ইমাম আবু হানিফা রাহ. ও ইমাম মালেক
+            রাহ.-এর চেয়েও বড় ফকীহ ও মুজতাহিদ এবং তাদের চেয়েও বেশি খোদাভীর” ও ধর্মপ্রাণ। আপনাদের জানা আছে নিশ্চয়ই,
+            তারা দু’জন শুধু ফকীহ ও মুজতাহিদই ছিলেন না, বরং তারা ছিলেন এমনই উচ্চতর অবস্থানের ফকীহ ও মুজতাহিদ যে, শরীয়ত,
+            ফিকহ ও বিভিন্ন ধর্মতত্ত্বের তুলনামূলক অধ্যয়নের একজন তালিবুল ইলম হিসেবে আমি বলছি-দুনিয়ার ধর্ম-জাতিগুলোর
+            মাঝে তাদের মতো ব্যক্তিত্বের কোনো নজির পাওয়া যাবে না। তাহলে কি তারা ভেবে দেখেননি যে, ইসলামী রাষ্ট্রের
+            কর্ণধারদের বিরুদ্ধে এসব ব্যক্তিত্ব পদক্ষেপ গ্রহণ করছেন? তাদের কী এমন সেনাশক্তি ছিল? তাদের পদক্ষেপের ফলাফল তো
+            তাহলে বিশৃঙ্খলা সৃষ্টি ছাড়া আর কিছুই ছিল না! এরপরও ইমাম আবু হানিফা ও ইমাম মালেক চোখবন্ধ করে কেন তাদের
+            সমর্থন দিয়ে গেলেন?
+        </p>
+        <p>
+            এটাই আমাদের আহলে সুন্নত ওয়াল জামাআতের অনন্য বিশেষত্ব যে, আমরা সাহাবায়ে কেরামের প্রতি, তাদের ফযীলত ও
+            মর্যাদার প্রতি শ্রদ্ধাশীল। আমরা আহলে বাইতের প্রতি মহববত পোষণ করি। আর আমাদের এই প্রাচুর্য নিয়ে আমরা গর্ববোধ
+            করি। এই মিলনায়তনটি যার স্মৃতি বহন করছে (ইমামে আহলে সুন্নত হযরত মাওলানা আব্দুশ শাকুর ফারূকী রাহ.) আমি নিজে
+            সাক্ষ দিচ্ছি, তার নিজেরও মতাদর্শ এটাই ছিল। এটাই ছিল হযরত শাহ ওয়ালিউল্লাহ রাহ. এবং তার বংশধরদের মতাদর্শ। এ
+            মতাদর্শটি লালন করতেন হযরত মুজাদ্দেদে আলফেসানী রাহ.। আমি পড়েছি, স্পষ্ট মনে আছে, হযরত মুজাদ্দিদে আলফেসানী
+            রাহ.-এর পিতার (হযরত শায়খ আব্দুল আহাদ সেরহিন্দী রাহ.) ইন্তেকালের সময় যখন ঘনিয়ে এল, একদম উর্ধ্বশ্বাস জারি
+            হয়ে গেল তখন মুজাদ্দিদে আলাফেসানী বললেন, আববাজান! আপনি তো বহুবার বলেছেন, আহলে বাইতের প্রতি মহববত পোষণ
+            মানুষের ঈমানসহ সুন্দর মৃত্যুর ক্ষেত্রে অনেক ভূমিকা রাখে।’ উত্তরে তার আববা বললেন-আমি তো সেরকমই দেখতে পাচ্ছি।’
+        </p>
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-dark text-white">
+        <div class="p-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="py-3">LEARNING ZONE</h1>
+                    <div class="social-media">
+                        <a href="#"><img src="../img/icon/fb.png"></a>
+                        <a href="#"><img src="../img/icon/insta.png"></a>
+                        <a href="#"><img src="../img/icon/tt.png"></a>
+                        <a href="#"><img src="../img/icon/linkedin.png"></a>
+                        <a href="#"><img src="../img/icon/ytube.png"></a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="rights-text">Copyright © 2021 Created By Nur Mohammod & Shoieb Alam All Rights Reserved.
+                    </p>
+                    <br>
+                    <div class="location d-flex">
+                        <img src="../img/icon/location.png">
+                        <p> International Islamic University Chittagong (IIUC)
+                            <br>
+                            Kumira, Chittagong-4000
+                        </p>
+                    </div>
+                    <br>
+                    <p><img src="../img/icon/phone.png"> +88-01745-940121
+                        <br><img src="../img/icon/mail.png">&nbsp;
+                        learningzone@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-5 mt-3">
+                    <h2 class="mt-5 ">Give Us Suggestions</h2>
+                    <div class="border"></div>
+                    <br>
+                    <p>Your valuable suggestions are always welcomed.</p>
+                    <form action="review.php" method="get">
+                        <div class="mb-3 w-75 d-grid">
+
+                            <input class="form-control me-4 form-control-lg" name="username" type="text"
+                                placeholder="Username" aria-label="Username">
+
+                            <input class="form-control my-2 form-control-lg" name="comment" type="text"
+                                placeholder="Enter Your Suggestion" aria-label="Username">
+                            <button name="submit" type="submit"
+                                class="btn btn-outline-success fw-bold text-white">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitarunnabi</title>
+
+    <!-- Bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/computer-courses.css">
+    <link rel="stylesheet" href="../css/sirat.css">
+
+    <!-- Bengali font  -->
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-religious">
+
+    <header>
+
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../home.php">Learning Zone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../computer-courses/computer-courses.php">Basic Courses </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../courses.php">CS Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../forums-blogs.php">Forums & Blogs </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../religious-corner/religious-corner.php">Islamic Corner</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#login" data-bs-toggle="modal">Log in</a>
+                        </li>
+                        <li class="btn-trial nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#signin" data-bs-toggle="modal">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/ Navigation bar-->
+
+
+
+    <!--Modal box-->
+
+    <!-- login modal -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Login to start your Session</h6>
+                    <form action="../login.php" method="GET">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!-- password  -->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pwd" />
+
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ login modal  -->
+
+    <!-- signin modal  -->
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Sign up to start your Session</h6>
+                    <form method="POST" action="../signup.php">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!----- mail -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="E-mail" type="text" autocomplete="off"
+                                name="email" />
+                        </div>
+
+                        <!----- password -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pass" />
+                        </div>
+
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ signin modal  -->
+
+    <!--/ Modal box-->
+
+
+    <div class="header-bg text-white text-center pt-5">
+        <div class="header-bg-conatainer py-5">
+            <h1 class="pt-5">আমরা কেন সীরাত পাঠ করবো?</h1>
+            <h4> আবদুস সাত্তার আইনী </h4>
+        </div>
+    </div>
+    <main class="container religious-conatainer fs-5 p-3 mb-5">
+        <p>
+            “আমরা রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর যুদ্ধগুলোর বিবরণ শিক্ষা দিতাম, যেভাবে কুরআনের সুরা
+            শিক্ষা দিতাম।”—আলী ইবনুল হুসাইন রাদিয়াল্লাহু আনহুমা। [1.আস-সীরাতুন নাবাবিয়্যাহ, ইবনে কাসীর, ২য় খ-, পৃষ্ঠা
+            ৩৫২।]
+        </p>
+
+        <p>
+            সীরাত বলতে বোঝায় মুহাম্মদ সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর জীবনে ও যুগে সংঘটিত সমস্ত ঘটনার বিবরণ ও ইতিহাস।
+            তিনি যা বলেছেন, যা করেছেন এবং যা-কিছুর অনুমোদন দিয়েছেন বা নির্দেশ দিয়েছেন তার সবকিছু সীরাতের অন্তর্ভুক্ত।
+            রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর জীবনচরিত, তাঁর চারিত্রিক গুণাবলি ও বৈশিষ্ট্যসমূহ, তাঁর
+            বংশধারা, তাঁর নবুওতের দলিলসমূহ এবং এগুলোর সঙ্গে সংশ্লিষ্ট ঘটনাবলি, তাঁর যুদ্ধ ও জিহাদ সীরাতের মৌলিক
+            বিষয়বস্তু। এটি কোনো সাধারণ মানুষের জীবনচরিত নয়; বরং সর্বশেষ ও শ্রেষ্ঠ নবী, পৃথিবীর ইতিহাসের শ্রেষ্ঠ মহামানব,
+            মুসলমানদের শ্রেষ্ঠ নেতার জীবনেতিহাস। একজন মুসলমানের জন্য সীরাত হলো সবচেয়ে বড় ও শ্রেষ্ঠ জ্ঞানভাণ্ডার।
+        </p>
+
+        <div class="text-center py-3">
+            <iframe width="953" height="480" src="https://www.youtube.com/embed/C5Xxz5yXpfk" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        </div>
+        <p>
+            শুধু জ্ঞান অর্জন নয়; বরং মুসলমান হিসেবে নিজের আকীদা ও বিশ্বাস এবং চিন্তা ও চেতনাকে একটি মজবুত ভিত্তির ওপর
+            প্রতিষ্ঠা করার জন্য সীরাত পাঠ অপরিহার্য। মুসলমানদের অন্তরে ঈমান ও বিশ্বাসকে দৃঢ় করার জন্য সীরাত পাঠের
+            আবশ্যকতা রয়েছে। কারণ, শয়তান সবসময় মুমিন বান্দার ঈমান হরণ করার চিন্তায় থাকে; অনেক সময় পারিপার্শ্বিক
+            অবস্থাবলিও ঈমান বিনষ্ট করার কারণ হয়ে থাকে। রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর জীবনচরিত
+            আলোকবর্তিকারূপে সামনে থাকলে আমাদের ঈমান ও বিশ্বাস পারিপার্শ্বিক আঘাত ও শয়তানের প্রবঞ্চনা থেকে মুক্ত থাকে।
+            খাব্বাব ইবনুল আরাত রাদিয়াল্লাহু আনহু বলেন, একবার আমরা নবী করীম সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর কাছে
+            অভিযোগ করলাম। তখন তিনি একটি চাদর মাথার নিচে রেখে কা’বা ঘরের ছায়ায় বিশ্রাম নিচ্ছিলেন। যেহেতু মুশরিকদের পক্ষ
+            থেকে আমাদের ওপর কঠিন নির্যাতন চলছিলো, তাই আমরা বললাম, আপনি আল্লাহর কাছে কেনো দোয়া করেন না? এই কথা শুনে তিনি
+            সোজা হয়ে বসলেন। এই সময় তাঁর চেহারা মুবারক লাল হয়ে গেলো। তিনি বললেন, “(তোমাদের ওপর এমন আর কি নির্যাতন চলেছে?)
+            তোমাদের পূর্ববর্তী যুগে যারা ঈমানদার ছিলো, এক আল্লাহর ইবাদত করতো, তাদের কারো জন্য মাটিতে গর্ত খোঁড়া হয়েছে,
+            তারপর তাকে সেই গর্তে রেখে তার মাথার ওপর করাত চালিয়ে তাকে দ্বিখ-িত করা হয়েছে। তবুও ওই নির্যাতন তাকে তার দ্বীন
+            ও ঈমান হতে ফেরাতে পারে নি। আবার কারো কারো শরীরের হাড় পর্যন্ত যাবতীয় গোশত ও শিরা লোহার চিরুনি দ্বারা আঁচড়িয়ে
+            ফেলা হয়, তবুও সেই নির্যাতন তাকে তার দ্বীন থেকে ফেরাতে পারে নি।” [2.সহীহুল বুখারী, অধ্যায় : আল-মানাকিব,
+            পরিচ্ছেদ : আলামাতুন নুবুওয়াতি ফিল ইসলাম]
+        </p>
+
+        <p>
+            সীরাতুন্নবীর পাঠ আল্লাহ তাআলার কিতাব কুরআন বোঝার জন্য সহায়ক। কুরআন বিভিন্ন ঘটনার প্রেক্ষিতে নাযিল হয়েছে।
+            জিজ্ঞাসার জবাবে, সন্দেহ দূরীকরণে, নবীজীবনের কোনো ঘটনার ব্যাখ্যায় কুরআনের আয়াতগুলো ধারাবাহিকভাবে নাযিল হয়েছে।
+            কুরআনে যেমন বদর যুদ্ধ, অহুদ ও খন্দকের যুদ্ধ, তাবুকের যুদ্ধ, হুদায়বিয়ার সন্ধি ইত্যাদি প্রসঙ্গে আলোচনা এসেছে,
+            তেমনি হিজরতের ঘটনা, ইফকের ঘটনা, ইহুদিদের বিভিন্ন জিজ্ঞাসার জবাব, সাহাবীগণের বিভিন্ন প্রেক্ষিতে বিভিন্ন
+            প্রশ্নের জবাব আলোচিত হয়েছে। সুতরাং কুরআনের এসব বিষয় বোঝার জন্য সীরাতের পাঠ অপরিহার্য। নবীজীবনের ধারাবাহিক
+            ঘটনাবলির ওপর স্বচ্ছ ও স্পষ্ট ধারণা না থাকলে কুরআনকে যথার্থভাবে বোঝা যাবে না। কুরআনের ১১৪টি সূরা ও তাদের
+            আয়াতসমূহ নাযিল হওয়ার কার্যকারণ রয়েছে; আর এ সকল কার্যকারণ নিহিত রয়েছে রাসূলুল্লাহ সা.-এর জীবন ও সময়কালের
+            ঘটনাবলিতে। কুরআন বোঝার পূর্বশর্ত হলো সীরাতের অধ্যয়ন ও তা আত্মস্থ করা।
+        </p>
+
+        <p>
+            হাদীস বোঝার জন্যও সীরাতের পাঠ জরুরি। হাদীসের গ্রন্থাবলিতে অধিকাংশ ক্ষেত্রে নবীজীবনের ঘটনাবলি খণ্ডিত বা
+            সংক্ষিপ আকারে উল্লেখ রয়েছে। কয়েকটি হাদীস একত্র করে একটি ঘটনার সম্পূর্ণ বিবরণ পাওয়া যায়। যাঁরা হাদীস বর্ণনা
+            করেছেন তাঁরা হয়তো একটি ঘটনার প্রতি শুধু ইঙ্গিত করেছেন এবং সংশ্লিষ্ট বিধান বর্ণনা করেছেন; কিন্তু পূর্ণ ঘটনার
+            বিবরণ দেন নি। এ-সকল ক্ষেত্রে সীরাতের ওপর দখল থাকা অত্যন্ত জরুরি। নবীজীবনের অনুপুঙ্খ ঘটনারাশিকে আত্মস্থ করতে
+            পারলে হাদীস ও সুন্নাহ বোঝা অত্যন্ত সহজ। রাসূলুল্লাহ সা.-এর জীবনচরিত ও সুন্নাহকে আলাদাভাবে বোঝার কোনো পথ নেই;
+            তাঁর জীবনের নির্যাস ও সারবত্তাই হাদীসশাস্ত্রে বিবৃত হয়েছে। কোনো কোনো হাদীস আছে যা পাঠ করে বোঝা দুঃসাধ্য,
+            কারণ সংশ্লিষ্ট ঘটনাটি জানা নেই। যে-সকল হাদীস কোনো ঘটনার প্রেক্ষিতে বর্ণিত হয়েছে, সংশ্লিষ্ট ঘটনার বিবরণ জানা
+            না থাকলে ওই হাদীসটি কিছুতেই বোঝা যাবে না। এ-কারণেই নবীজীবন ও তাঁর কালের ইতিহাস পাঠ অনিবার্য।
+        </p>
+
+        <p>
+            আরেকটি কারণে সীরাত পাঠের বিকল্প নেই; তা হলো ইসলামী আকীদা ও বিশ্বাসকে উপলব্ধি করা ও ধারণ করা। নবীজী
+            সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম তাঁর বিশ্বাসকে কর্মে রূপ দিয়েছেন; তিনি যা বিশ্বাস করতেন, তা-ই বলতেন এবং তা-ই
+            অনুষ্ঠান করতেন। নবীজী সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম-এর আমলী যিন্দেগী, তাঁর তাকওয়া ও পরহেযগারিতা, আল্লাহ
+            তাআলার প্রতি তাঁর আস্থা ও আনুগত্য, ইখলাস ও সত্যনিষ্ঠা এ-সকল বিয়ষ উপলব্ধি ও ধারণ করার জন্য সীরাত পাঠের বিকল্প
+            নেই। সত্যের পথে নবীজীর দৃঢ়তা, কষ্ট এবং বিপর্যয়ে তাঁর ধৈর্য ও সহিষ্ণুতা, শত্রুদের উৎপীড়ন ও নির্যাতনের
+            মুখোমুখি দাঁড়িয়ে স্থির বিশ্বাসে অটলতা তাঁর উম্মতের জন্য শিক্ষণীয় ও অনুকরণীয়। আকীদা ও বিশ্বাসের ক্ষেত্রে
+            কোনটি গ্রহণযোগ্য আর কোনটি বর্জনযোগ্য; আমলের ক্ষেত্রে কোনটি গ্রহণযোগ্য বা গ্রহণঅযোগ্য; ইসলামী বিশ্বাসকে ধারণ
+            করে জীবনচলার পথে কোনটি অনুকরণযোগ্য ও কোনটি বর্জনীয় তা জানার জন্য রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়া
+            সাল্লাম-এর জীবনচরিতের পাঠ অপরিহার্য।
+        </p>
+
+        <p>
+            নবীজীর মক্কী জীবন ছিলো ঈমানের পথে এক বিশাল অগ্নিপরীক্ষার নাম। তাওহীদ, একত্ববাদ, আল্লাহর মহত্ত্ব, বড়ত্ব ও
+            পবিত্রতার বিষয়ে অবিশ্বাসীদের পক্ষ থেকে উত্থাপিত যাবতীয় প্রশ্ন, জিজ্ঞাসা ও সন্দেহের জবাব পাওয়া যাবে সীরাতের
+            মক্কী জীবন অংশে। পবিত্র কুরআনে বলা হয়েছে, “আপনি বলুন, যদি তোমরা আল্লাহকে ভালোবাসতে চাও তাহলে আমার অনুসরণ
+            করো।” [3.সুরা আলে ইমরান : আয়াত ৩১] এই আয়াতে আল্লাহ তাআলাকে ভালোবাসার জন্য মুহাম্মদ সাল্লাল্লাহু আলাইহি ওয়া
+            সাল্লাম-এর অনুসরণকে শর্ত করা হয়েছে। আর নবীজীকে তখনই যথার্থভাবে অনুসরণ করা যাবে যখন তাঁর জীবনসংগ্রাম, তাঁর
+            যুদ্ধ ও জিহাদ, তাঁর আদেশ ও নিষেধ, তাঁর বিচার ও ফয়সালা সম্পর্কে সম্যক জ্ঞান থাকবে।
+        </p>
+
+        <p>
+            নবীজীর মক্কী জীবন ছিলো ঈমানের পথে এক বিশাল অগ্নিপরীক্ষার নাম। তাওহীদ, একত্ববাদ, আল্লাহর মহত্ত্ব, বড়ত্ব ও
+            পবিত্রতার বিষয়ে অবিশ্বাসীদের পক্ষ থেকে উত্থাপিত যাবতীয় প্রশ্ন, জিজ্ঞাসা ও সন্দেহের জবাব পাওয়া যাবে সীরাতের
+            মক্কী জীবন অংশে। পবিত্র কুরআনে বলা হয়েছে, “আপনি বলুন, যদি তোমরা আল্লাহকে ভালোবাসতে চাও তাহলে আমার অনুসরণ
+            করো।” [3.সুরা আলে ইমরান : আয়াত ৩১] এই আয়াতে আল্লাহ তাআলাকে ভালোবাসার জন্য মুহাম্মদ সাল্লাল্লাহু আলাইহি ওয়া
+            সাল্লাম-এর অনুসরণকে শর্ত করা হয়েছে। আর নবীজীকে তখনই যথার্থভাবে অনুসরণ করা যাবে যখন তাঁর জীবনসংগ্রাম, তাঁর
+            যুদ্ধ ও জিহাদ, তাঁর আদেশ ও নিষেধ, তাঁর বিচার ও ফয়সালা সম্পর্কে সম্যক জ্ঞান থাকবে।
+        </p>
+    </main>
+
+
+    <!--Footer-->
+    <footer class="bg-dark text-white">
+        <div class="p-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="py-3">LEARNING ZONE</h1>
+                    <div class="social-media">
+                        <a href="#"><img src="../img/icon/fb.png"></a>
+                        <a href="#"><img src="../img/icon/insta.png"></a>
+                        <a href="#"><img src="../img/icon/tt.png"></a>
+                        <a href="#"><img src="../img/icon/linkedin.png"></a>
+                        <a href="#"><img src="../img/icon/ytube.png"></a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="rights-text">Copyright © 2021 Created By Nur Mohammod & Shoieb Alam All Rights Reserved.
+                    </p>
+                    <br>
+                    <div class="location d-flex">
+                        <img src="../img/icon/location.png">
+                        <p> International Islamic University Chittagong (IIUC)
+                            <br>
+                            Kumira, Chittagong-4000
+                        </p>
+                    </div>
+                    <br>
+                    <p><img src="../img/icon/phone.png"> +88-01745-940121
+                        <br><img src="../img/icon/mail.png">&nbsp;
+                        learningzone@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-5 mt-3">
+                    <h2 class="mt-5 ">Give Us Suggestions</h2>
+                    <div class="border"></div>
+                    <br>
+                    <p>Your valuable suggestions are always welcomed.</p>
+                    <form action="review.php" method="get">
+                        <div class="mb-3 w-75 d-grid">
+
+                            <input class="form-control me-4 form-control-lg" name="username" type="text"
+                                placeholder="Username" aria-label="Username">
+
+                            <input class="form-control my-2 form-control-lg" name="comment" type="text"
+                                placeholder="Enter Your Suggestion" aria-label="Username">
+                            <button name="submit" type="submit"
+                                class="btn btn-outline-success fw-bold text-white">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

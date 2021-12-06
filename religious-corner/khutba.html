@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Khutba </title>
+
+    <!-- Bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/computer-courses.css">
+    <link rel="stylesheet" href="../css/khutba.css">
+
+    <!-- Bengali font  -->
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-religious">
+
+    <header>
+
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../home.php">Learning Zone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../computer-courses/computer-courses.php">Basic Courses </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../courses.php">CS Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../forums-blogs.php">Forums & Blogs </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../religious-corner/religious-corner.php">Islamic Corner</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#login" data-bs-toggle="modal">Log in</a>
+                        </li>
+                        <li class="btn-trial nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#signin" data-bs-toggle="modal">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/ Navigation bar-->
+
+
+
+    <!--Modal box-->
+
+    <!-- login modal -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Login to start your Session</h6>
+                    <form action="../login.php" method="GET">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!-- password  -->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pwd" />
+
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ login modal  -->
+
+    <!-- signin modal  -->
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">Sign up to start your Session</h6>
+                    <form method="POST" action="../signup.php">
+
+                        <!----- username -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Username" id="loginid" type="text"
+                                autocomplete="off" name="fname" />
+
+                        </div>
+
+                        <!----- mail -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="E-mail" type="text" autocomplete="off"
+                                name="email" />
+                        </div>
+
+                        <!----- password -------------->
+                        <div class="my-4">
+                            <input class="form-control" placeholder="Password" id="loginpsw" type="password"
+                                autocomplete="off" name="pass" />
+                        </div>
+
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ signin modal  -->
+
+    <!--/ Modal box-->
+
+
+    <div class="header-bg text-white text-center pt-5">
+        <div class="header-bg-conatainer py-5">
+            <h1 class="pt-5"> জুমু’আর খুতবা ও আমাদের অবহেলা </h1>
+            <h4> আরিফুল ইসলাম দিপু </h4>
+        </div>
+    </div>
+    <main class="container religious-conatainer fs-5 p-3 mb-5">
+        <p>
+            শুক্রবার, জুমু’আর সালাতের জন্য মসজিদে অন্য দিনের চেয়ে অধিক মুসল্লির আগমন। ইমাম সাহেব বাংলায় খুৎবা দিচ্ছেন,
+            সবাই মনোযোগের সাথে শুনছেন। প্রথমে বিভিন্ন হালাল-হারামের বিষয় নিয়ে আলোচনা শুরু করলেন। ইমাম সাহেব একের পর এক
+            বলে যাচ্ছেন- সুদ হারাম, জুয়া হারাম, নেশাকর বস্তু হারাম, গান-বাজনা হারাম ইত্যাদি। এরপর বলতে শুরু করলেন
+            জান্নাত-জাহান্নাম নিয়ে। জান্নাতের সৌন্দর্য ও ভোগ-বিলাসিতা, আর জাহান্নামের কাঠিন্য ও ভয়াবহতা নিয়ে অনেক কিছু
+            বললেন। যেমন- জান্নাত কেবল বিশ্বাসীদের জন্যই, সেখানে কারো মৃত্যু ভয় থাকবে না, সেখানে কেউ অতৃপ্ত থাকবে না,
+            সেখানে গরীবদের সংখ্যাই বেশি হবে, সেখানে শহীদগণই সর্বোচ্চ মর্যাদা পাবেন ইত্যাদি; আবার জাহান্নাম খুবই
+            যন্ত্রণাদায়ক স্থান, সেখানে নিকৃষ্ট বান্দারাই থাকবে, সেখান কেউ মরবেও না বাঁচবেও না ইত্যাদি। সবশেষে সালাতের
+            ব্যাপারে বললেন, সালাত ব্যতীত মুসলিম থাকা যায় না, কিয়ামতের মাঠে সালাতের হিসাবই প্রথম নেওয়া হবে, একজন অমুসলিম
+            ও একজন মুসলিমের মধ্যে সালাত বড় একটি পার্থক্য ইত্যাদি।
+        </p>
+
+        <p>
+            উপরে (সংক্ষিপ্তভাবে) উল্লেখিত খুতবার মতো শতশত খুতবা আমরা ইতিমধ্যে শুনে ফেলেছি। কিন্তু এতসবের কতটুকু আমাদের
+            উপর কার্যকর হয়েছে? এককথায় খুবই কম। মসজিদ থেকে বের হয়েই আমরা সবকিছু ভুলে যাই। এমনকি মসজিদটাও ভুলে যাই। এক
+            সপ্তাহ পরে পারিবারিক চাপে কিংবা সামাজিকতা রক্ষায় আবার মসজিদের সাথে দেখা হয়। আর এই চক্রাকারেই চলতে থাকে
+            আমাদের ধর্মীয় জীবন, মাঝখান থেকে হারিয়ে যায় গুরুত্বপূর্ণ কিছু নসীহা। তাই তো মসজিদ থেকে বের হতেই সুদ, ঘুষ,
+            জুয়া, নেশা, নোংরামি সবই সমান গতিতে চলতে থাকে। তবে হারিয়ে যায় মহামহিম আল্লাহ্ সুবহানাহু ওয়া তা’আলার দিকে ফিরে
+            আসার উত্তম কথাগুলো, আর ভুলে যাই ওপারের সুন্দর ও পবিত্র জীবনটা।
+        </p>
+
+        <p>
+            যেখানে সাপ্তাহিক এ খুতবাগুলো আমাদের পথনির্দেশ হওয়ার কথা ছিলো, কিন্তু তা না হয়ে এগুলো হয়ে গেছে অবহেলিত। যার
+            প্রভাব আমাদের দৈনন্দিন জীবনে পড়তে শুরু করেছে। তাই আমরা মসজিদে তাওহীদের ঘোষণা দিলেও মসজিদ থেকে বের হয়েই
+            নানারকম শির্ক ও কুফরিতে নিমজ্জিত হতে দ্বিধা করছি না। কারণ আমরা আল্লাহর ভয়ে মসজিদে না গিয়ে সামাজিকতা
+            রক্ষার্থে মসজিদে যাচ্ছি কিংবা আমরা আমাদের প্রতিপালককে যথাযথ ভয় করছি না। তাই মসজিদ থেকে কল্যাণকর কোনো উপদেশ
+            নিয়ে আসতে পারছি না। এজন্যই তো দেখা যায় খতিব সাহেব দাড়ি রাখার গুরুত্ব নিয়ে খুতবা দেওয়া সত্ত্বেও পরের সপ্তাহে
+            ক্লিন শেভকে সুন্নাহ মনে করেই (অর্থাৎ, দাড়ি শেইভ করাকেই পরিষ্কার পরিচ্ছন্নতার অঙ্গ মনে করে।- সম্পাদক) অনেকে
+            মসজিদে যাই। আবার পর্দার গুরুত্ব জেনেও মেয়েটার পর্দাহীন চলাফেরা ঠাণ্ডা মাথায় মেনে নিচ্ছি। যা খুবই দুঃখজনক।
+        </p>
+
+        <p>
+            একদিন আল্লাহর রাসূল ﷺ বললেন, “তোমরা আল্লাহকে যথাযথভাবে লজ্জা কর।” সকলে বললো, “হে আল্লাহর নবী! আমরা তো
+            আলহামদুলিল্লাহ আল্লাহকে লজ্জা করে থাকি।” তিনি বললেন, “না, ঐরূপ নয়। আল্লাহকে যথাযথভাবে লজ্জা করার অর্থ এই যে,
+            মাথা ও তার সংযুক্ত অন্যান্য অঙ্গ (জিভ, চোখ এবং কান) কে (অবৈধ প্রয়োগ হতে) হিফাযত করবে, পেট ও তার সংশ্লিষ্ট
+            অঙ্গ (হাত, পা, হৃদয় ও লজ্জাস্থান) কে (তাঁর অবাধ্য আচরণ ও হারাম হতে) হিফাযত করবে এবং মরণ ও তার পর হাড় মাটি
+            হয়ে যাওয়ার কথা (সর্বদা) স্মরণে রাখবে। আর যে ব্যক্তি পরকাল (ও তার সুখময় জীবন) পাওয়ার ইচ্ছা রাখে, সে ইহকালের
+            সৌন্দর্য পরিহার করবে। যে ব্যক্তি এ সবকিছু করে, সে-ই প্রকৃতপক্ষে আল্লাহকে যথাযথভাবে লজ্জা করে।” [আহমাদ ৩৬৭১,
+            তিরমিযী ২৪৫৮]
+        </p>
+
+        <p>
+            যেখানে সাপ্তাহিক এ খুতবাগুলো আমাদের পথনির্দেশ হওয়ার কথা ছিলো, কিন্তু তা না হয়ে এগুলো হয়ে গেছে অবহেলিত। যার
+            প্রভাব আমাদের দৈনন্দিন জীবনে পড়তে শুরু করেছে। তাই আমরা মসজিদে তাওহীদের ঘোষণা দিলেও মসজিদ থেকে বের হয়েই
+            নানারকম শির্ক ও কুফরিতে নিমজ্জিত হতে দ্বিধা করছি না। কারণ আমরা আল্লাহর ভয়ে মসজিদে না গিয়ে সামাজিকতা
+            রক্ষার্থে মসজিদে যাচ্ছি কিংবা আমরা আমাদের প্রতিপালককে যথাযথ ভয় করছি না। তাই মসজিদ থেকে কল্যাণকর কোনো উপদেশ
+            নিয়ে আসতে পারছি না। এজন্যই তো দেখা যায় খতিব সাহেব দাড়ি রাখার গুরুত্ব নিয়ে খুতবা দেওয়া সত্ত্বেও পরের সপ্তাহে
+            ক্লিন শেভকে সুন্নাহ মনে করেই (অর্থাৎ, দাড়ি শেইভ করাকেই পরিষ্কার পরিচ্ছন্নতার অঙ্গ মনে করে।- সম্পাদক) অনেকে
+            মসজিদে যাই। আবার পর্দার গুরুত্ব জেনেও মেয়েটার পর্দাহীন চলাফেরা ঠাণ্ডা মাথায় মেনে নিচ্ছি। যা খুবই দুঃখজনক।
+        </p>
+
+        <p>
+            বর্তমানে আরেকটি ট্রেন্ড দেখা যাচ্ছে যে, কেউ কেউ একদম সালাত শুরু হওয়ার পূর্ব মূহূর্তে দৌড়ে এসে উপস্থিত হয়।
+            তাদের কারো কারো কাছে খেলা দেখা, মুভিটা শেষ করাই যেন অধিক গুরুত্বপূর্ণ ছিলো। তাই তারা সাপ্তাহিক এই
+            গুরুত্বপূর্ণ সময়ের গুরুত্বপূর্ণ কথাগুলো থেকে দূরেই থেকে যায়। অথচ আল্লাহর রাসূল ﷺ বলেন,
+
+            “যে ব্যক্তি জুমু‘আহ’র দিন ফরজ গোসলের ন্যায় গোসল করে এবং সলাতের জন্য আগমন করে, সে যেন একটি উট কুরবানি করলো।
+            যে ব্যক্তি দ্বিতীয় পর্যায়ে আগমন করে, সে যেন একটি গাভী কুরবানি করলো। তৃতীয় পর্যায়ে যে আগমন করে, সে যেন একটি
+            শিং বিশিষ্ট দুম্বা কুরবানি করলো। চতুর্থ পর্যায়ে যে আগমন করলো, সে যেন একটি মুরগী কুরবানি করলো। পঞ্চম পর্যায়ে
+            যে আগমন করলো, সে যেন একটি ডিম কুরবানি করলো। পরে ইমাম যখন খুতবাহ প্রদানের জন্য বের হন, তখন মালায়িকা
+            (ফেরেশতামণ্ডলী) যিক্র শ্রবণের জন্য উপস্থিত হয়ে থাকে।” [বুখারী, মুসলিম, আল লু’লু ওয়াল মারজান, হাদিস নং ৪৯৩]
+        </p>
+
+        <p>
+            জুমু’আর দিনের ফযিলত সম্পর্কে আমরা অনেক কিছুই জানি, যেমন- সাপ্তাহিক ঈদের দিন, সপ্তাহের শ্রেষ্ঠ দিন, দু’আ
+            কবুলের বিশেষ মূহূর্ত ইত্যাদি। ইবনুল কাইয়্যিম (রাহিমাহুল্লাহ) আরও বলেন, “অন্য মাসের তুলনায় রামাদ্বান মাসের
+            মর্যাদা যেমন, সপ্তাহের অন্যান্য দিনের তুলনায় জুমু’আ বারের মর্যাদা ঠিক তেমন। তাছাড়া রামাদ্বানের কদরের রাতে
+            যেমনভাবে দু’আ কবুল হয়, ঠিক তেমনি শুক্রবারের সূর্যাস্তের পূর্বক্ষণেও দু’আ কবুল হয়।” [যাদুল মা’আদ ১/৩৯৮]
+        </p>
+
+        <p>
+            তবে এই লিখার মূল মেসেজটি হলো- আমরা প্রতিনিয়ত যে গুরুত্বপূর্ণ সুযোগটি (অর্থাৎ সাপ্তাহিক জুুমু’আর খুতবাকে)
+            অবহেলা করে যাচ্ছি, তা যেন আর না হয়। আমাদের দেশে অধিকাংশ মসজিদে আরবিতে খুতবা দিলেও এর পূর্বে বাংলায় কিছুু
+            নসীহাত করা হয়। আর বিজ্ঞ খতিবগণ ঐ মূহূর্তে গুরুত্বপূর্ণ অনেক কিছুই বলে থাকেন, যা আমাদেরকে সহজ-সরল পথটির
+            সন্ধান দিতে পারে। তাই সাপ্তাহিক এই সুযোগকে আমরা যেন কোনোক্রমেই অবহেলা না করি। প্রয়োজনে আমরা যেন কোনো বিজ্ঞ
+            আলিমকে খতিব হিসেবে মনোনয়ন করি এবং তাঁর দেওয়া গুরুত্বপূর্ণ নসীহাগুলো নিজের জীবনে বাস্তবায়ন করি। আর আমাদের
+            সম্মানিত খতিবগণও যেন তাঁদের খুতবাকে প্রথাগত খুুতবা হিসেবে না নেন এবং প্রতিটা খুতবাই যেন হয় আমাদের নিত্যদিনের
+            পথ চলার স্পষ্ট দিকনির্দেশনা। আল্লাহ্ আমাদের জন্য সহজ করুন। (আমিন)
+        </p>
+
+        <p>
+            অবশেষে আমাদের সবার প্রতি আল্লাহ সুুবহানাহু ওয়া তা’আলার পক্ষ থেকে একটি রিমাইন্ডার-
+        </p>
+
+        <p>
+            ‘হে মানুষ! কীসে তোমাকে তোমার মহান প্রতিপালক সম্পর্কে ধোঁকায় ফেলে দিয়েছে?’ [সূরাহ আল-ইনফিতার (৮২): ৬]
+        </p>
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-dark text-white">
+        <div class="p-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="py-3">LEARNING ZONE</h1>
+                    <div class="social-media">
+                        <a href="#"><img src="../img/icon/fb.png"></a>
+                        <a href="#"><img src="../img/icon/insta.png"></a>
+                        <a href="#"><img src="../img/icon/tt.png"></a>
+                        <a href="#"><img src="../img/icon/linkedin.png"></a>
+                        <a href="#"><img src="../img/icon/ytube.png"></a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="rights-text">Copyright © 2021 Created By Nur Mohammod & Shoieb Alam All Rights Reserved.
+                    </p>
+                    <br>
+                    <div class="location d-flex">
+                        <img src="../img/icon/location.png">
+                        <p> International Islamic University Chittagong (IIUC)
+                            <br>
+                            Kumira, Chittagong-4000
+                        </p>
+                    </div>
+                    <br>
+                    <p><img src="../img/icon/phone.png"> +88-01745-940121
+                        <br><img src="../img/icon/mail.png">&nbsp;
+                        learningzone@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-5 mt-3">
+                    <h2 class="mt-5 ">Give Us Suggestions</h2>
+                    <div class="border"></div>
+                    <br>
+                    <p>Your valuable suggestions are always welcomed.</p>
+                    <form action="review.php" method="get">
+                        <div class="mb-3 w-75 d-grid">
+
+                            <input class="form-control me-4 form-control-lg" name="username" type="text"
+                                placeholder="Username" aria-label="Username">
+
+                            <input class="form-control my-2 form-control-lg" name="comment" type="text"
+                                placeholder="Enter Your Suggestion" aria-label="Username">
+                            <button name="submit" type="submit"
+                                class="btn btn-outline-success fw-bold text-white">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

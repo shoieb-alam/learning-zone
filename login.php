@@ -1,0 +1,183 @@
+<?php
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Zone</title>
+
+    <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
+
+    <style>
+        body {
+            background: url('img/reviewback.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        .card {
+            position: relative;
+            top: 100px;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        .modal-dialog {
+            width: 350px;
+            margin: 150px auto;
+        }
+
+        .modal-header,
+        .btn {
+            background-color: #5FCF80;
+        }
+    </style>
+</head>
+
+<body>
+    <?php
+    if (isset($_GET['fname'])) {
+        $fname = $_GET["fname"];
+        $password = $_GET["pwd"];
+
+        if ($fname == "" || $password == "") {
+            echo "
+        <div class='card text-white bg-danger mb-3 text-center mx-auto' style='max-width: 18rem;'>
+            <div class='card-header'>
+                Login unsuccessfull!
+            </div>
+            <div class='card-body'>
+                <h5 class='card-title'>
+                    All inputs are neccessary!
+                </h5>
+                <p class='card-text'>
+                    All inputs are necessary  to log into your  account
+                </p>
+                <button class='btn-secondary'><a href='http://localhost/Learning-Zone/'>Go Back</button>
+            </div>
+        </div>";
+        } else {
+
+            if ($_SERVER['REQUEST_METHOD'] == "GET") //con establish
+            {
+                $localhost = "localhost";
+                $username = "root";
+                $passw = "";
+                $db = "expdb";
+                $conn = mysqli_connect($localhost, $username, $passw, $db);
+                if (!$conn) {
+                    echo "";
+                } else {
+                    echo "";
+                }
+                $result = mysqli_query($conn, "select * from exptable where fname='$fname' and password='$password'")
+                    or die("FAILED!!" . mysqli_error($conn));
+                $row = mysqli_fetch_array($result);
+                if ($fname == 'admin' and $password == 'admin') {
+                    header("Location: adminpanel.php");
+                    echo "hello Admin";
+                } else {
+                    if ($row['fname'] == $fname and $row['password'] == $password) {
+                        $_SESSION["username"] = $fname;
+
+                        echo "
+                    <div class='card text-white bg-success mb-3 text-center mx-auto' style='max-width: 18rem;'>
+                        <div class='card-header'>
+                            Login Successfull!
+                        </div>
+                        <div class='card-body'>
+                            <h5 class='card-title text-capitalize'>
+                                Welcome, " . $_SESSION["username"] . "</h5>
+                            <p class='card-text'>
+                                We were waiting for you to check out your account 
+                            </p>
+                            <button class='btn-success'>
+                                <a href='myaccount.php'>My Account</a>
+                            </button>
+                        </div>
+                    </div>";
+                    } else {
+
+                        echo "
+                    <div class='card text-white bg-danger mb-3 text-center mx-auto' style='max-width: 18rem;'>
+                        <div class='card-header'>
+                            Login Failed!
+                        </div>
+                        <div class='card-body'>
+                            <h5 class='card-title'>
+                                Username or Password is incorrect!!
+                            </h5>
+                            <p class='card-text'>
+                                Looks like you have forgot your username or password 
+                            </p>
+                            <div class='d-flex justify-content-around'>
+                                <button class='btn-danger'>
+                                    <a href='#' data-bs-target='#forgotpass' data-bs-toggle='modal'>Forgot Password!</a>
+                                </button>
+                                <button class='btn-secondary'>
+                                    <a href='http://localhost/Learning-Zone/'>Go Back!</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>";
+                    }
+                }
+            }
+        }
+    }
+    ?>
+
+    <!-- Forgot password modal  -->
+    <div class="modal fade" id="forgotpass" tabindex="-1" aria-labelledby="forgotpass" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Forgot Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center my-2">It will take just few seconds</h6>
+                    <form method="GET" action="forgotpassword.php">
+                        <div class="my-4">
+
+                            <!----- username -------------->
+                            <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="fname" />
+
+                        </div>
+                        <div class="my-4">
+
+                            <!----- mail -------------->
+                            <input class="form-control" id="loginpsw" placeholder="E-mail" type="text" autocomplete="off" name="email" />
+
+
+                        </div>
+                        <div class="my-4">
+
+                            <!----- password -------------->
+                            <input class="form-control" placeholder="New Password" id="loginpsw" type="text" autocomplete="off" name="pwd" />
+
+                        </div>
+
+                        <div class="modal-footer d-block">
+                            <button type="submit" class="btn btn-success container-fluid">Reset Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap5.0.2.bundle.min.js"></script>
+</body>
+
+</html>

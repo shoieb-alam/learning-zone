@@ -1,0 +1,78 @@
+<?php
+    if (isset($_POST['coursename'])) {
+        $coursename = $_POST["coursename"];
+        $title1 = $_POST["title1"];
+        $url1 = $_POST["url1"];
+        $title2 = $_POST["title2"];
+        $url2 = $_POST["url2"];
+        $title3 = $_POST["title3"];
+        $url3 = $_POST["url3"];
+        $title4 = $_POST["title4"];
+        $url4 = $_POST["url4"];
+        $title5 = $_POST["title5"];
+        $url5 = $_POST["url5"];
+
+        if ($coursename == "" || $title1 == "" || $url1 == "" || $title2 == "" || $url2 == "" || $title3 == "" || $url3 == "" || $title4 == "" || $url4 == "" || $title5 == "" || $url5 == "") {
+            echo "
+            <div class='modal fade' id='courseAdding' tabindex='-1' aria-labelledby='courseAddingLabel' aria-hidden='true'>
+              <div class='modal-dialog modal-dialog-centered'>
+                <div class='modal-content'>
+                  <div class='modal-header'>
+                    <h5 class='modal-title' id='courseAddingLabel'>Course Can't be Added</h5>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                  </div>
+                  <div class='modal-body'>
+                    <p> At least one field is empty </p>
+                  </div>
+                  <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Go back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ";
+        } else {
+
+            if ($_SERVER['REQUEST_METHOD'] == "POST") //con establish
+            {
+                $localhost = "localhost";
+                $usernamew = "root";
+                $passwordw = "";
+                $db = "expdb";
+                $conn = mysqli_connect($localhost, $usernamew, $passwordw, $db);
+                if (!$conn) {
+                    echo "";
+                } else {
+                    echo "";
+                }
+                $sql = "INSERT INTO coursetable VALUES('$coursename','$title1','$url1','$title2','$url2','$title3','$url3','$title4','$url4','$title5','$url5')";
+                $result = mysqli_query($conn, $sql);
+
+                echo "<div class='modal fade' id='courseAdding' tabindex='-1' aria-labelledby='courseAddingLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-centered'>
+                  <div class='modal-content'>
+                    <div class='modal-header'>
+                      <h5 class='modal-title' id='courseAddingLabel'>Course Added</h5>
+                      <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                    </div>
+                    <div class='modal-body'>
+                      <p> Successfully added " . $coursename . " Course </p>
+                    </div>
+                    <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary'   data-bs-dismiss='modal'>
+                            <a href='http://localhost/Learning-Zone/'>
+                                View Course
+                            </a>
+                        </button>
+                      <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'> Close </button>
+                    </div>
+                  </div>
+                </div>
+              </div>";
+            } else {
+                echo "error";
+            }
+        }
+    }
+    ?>
+    <script src="js/bootstrap5.0.2.bundle.min.js"></script>
