@@ -115,7 +115,7 @@ session_start();
             </div>
           </div>
           <div class='col-md-1 text-end'>
-            <div>" . $row['ui_avg'] . " % </div>
+            <div>" . round($row['ui_avg'], 1) . " % </div>
           </div>
         </div>";
 
@@ -136,7 +136,7 @@ session_start();
             </div>
           </div>
           <div class='col-md-1 text-end'>
-            <div>" . $row['per_avg'] . " % </div>
+            <div>" . round($row['per_avg'], 1) . " % </div>
           </div>
         </div>";
 
@@ -157,7 +157,7 @@ session_start();
             </div>
           </div>
           <div class='col-md-1 text-end'>
-            <div>" . $row['des_avg'] . " % </div>
+            <div>" . round($row['des_avg'], 1)  . " % </div>
           </div>
         </div>";
 
@@ -178,7 +178,7 @@ session_start();
             </div>
           </div>
           <div class='col-md-1 text-end'>
-            <div>" . $row['us_avg'] . " % </div>
+            <div>" . round($row['us_avg'], 1) . " % </div>
           </div>
         </div>";
       }
