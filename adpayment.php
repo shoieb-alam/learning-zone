@@ -58,6 +58,7 @@ session_start();
     <div class="text-center my-3">
         <h1>Course Payment Details</h1>
     </div>
+    <hr>
 
     <?php
     $i = 0;
@@ -74,34 +75,33 @@ session_start();
 
             $sql = "Select * from paymenttable order by time desc";
             $result = mysqli_query($conn, $sql);
-            echo "<table class='w-100 fw-bold'>";
-            echo "<tr >";
             echo "
-                <td>Sl No.</td>
-                <td>Username</td>
-                <td>Password</td>
-                <td>Transection ID No.</td>
-                <td>Course Name</td>
-                <td>Time of payment</td>";
-            echo "</td>";
-            echo "</tr>";
-            echo "</table><hr>";
+            <table class='w-100 fw-bold'>
+                <tr>                
+                    <td>Sl No.</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Transection ID No.</td>
+                    <td>Course Name</td>
+                    <td>Time of payment</td>
+                </tr>
+            </table>
+            <hr>";
 
             echo "<table class='table table-hover table-dark'>";
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $i++;
-                    echo "<tr >";
 
                     echo  "
+                    <tr>
                         <td>" . $i . "</td>
                         <td>" . $row["fname"] . "</td>
                         <td>" . $row["password"] . "</td>
                         <td>" . $row["cred"] . "</td>
                         <td>" . $row["coursename"] . "</td>
-                        <td>" . $row['time'] . "</td>";
-
-                    echo "</tr>";
+                        <td>" . $row['time'] . "</td>
+                    </tr>";
                 }
                 echo "</table>";
                 echo "<span class='badge'> $i </span>";

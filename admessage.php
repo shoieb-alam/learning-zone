@@ -74,35 +74,34 @@ session_start();
             echo "";
             $sql = "Select * from contacttable order by time desc";
             $result = mysqli_query($conn, $sql);
-            echo "<table class='w-100 fw-bold'>";
-            echo "<tr >";
             echo "
-                <td> Sl No. </td>
-                <td> Fullname </td>
-                <td> Email </td>
-                <td> Subject </td>
-                <td> Message </td>
-                <td> Time of Message </td>
-                ";
-            echo "</tr>";
-            echo "</table><hr>";
+                <table class='w-100 fw-bold'>
+                    <tr>
+                        <td> Sl No. </td>
+                        <td> Fullname </td>
+                        <td> Email </td>
+                        <td> Subject </td>
+                        <td> Message </td>
+                        <td> Time of Message </td>
+                    </tr>
+                </table>
+                <hr>";
+
             echo "<table class='table table-hover table-dark'>";
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $i++;
-                    echo "<tr >";
-
-                    echo  "
-                        <td >" . $i . "</td> 
+                    echo "
+                    <tr>
+                        <td>" . $i . "</td> 
                         <td>" . $row["fullname"] . "</td>
                         <td>" . $row["email"] . "</td>
                         <td>" . $row["subject"] . "</td>
                         <td>" . $row["message"] . "</td>
-                        <td>" . $row["time"] . "</td>";
-                    echo "</tr>";
+                        <td>" . $row["time"] . "</td>
+                    </tr>";
                 }
                 echo "</table>";
-
                 echo "<span class='badge'> $i </span>";
             } else {
 

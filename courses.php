@@ -469,9 +469,50 @@ session_start();
           </div>
         </div>
 
-      </div>
+        <div class="col">
+          <?php
+          if ($_SERVER['REQUEST_METHOD'] == "GET") {
+            $localhost = "localhost";
+            $usernamew = "root";
+            $passwordw = "";
+            $db = "expdb";
+            $conn = mysqli_connect($localhost, $usernamew, $passwordw, $db);
+            if (!$conn) {
+              echo "Connection error";
+            } else {
+              echo "";
+              $sql = "Select * from coursetable";
+              $result = mysqli_query($conn, $sql);
+              if (mysqli_num_rows($result) > 0) {
+                while ($course = mysqli_fetch_assoc($result)) {
+                  echo "        
+                  <div class='card h-100'>
+                    <div class='card-body'>
+                      <h2 class='card-title'>" . $course["coursename"] . "</h2>
+                      <p class='card-text'>
+                        " . $course["description"] . "
+                      </p>
+                    </div>
+                    <div>
+                      <small class='text-warning fw-bold'> 4.6 </small>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star-half-o checked'></span>
+                    </div>
+                    <br>
+                    <button type='submit' id=" . $course["coursename"] . " onClick='showMessage(this.id)' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#paymentModal'        data-bs-whatever='@mdo'>Buy the course</button>
+                  </div>
+                </div>";
+                }
+              }
+            }
+          }
+          ?>
+        </div>
 
-    </div>
+      </div>
   </main>
 
 
