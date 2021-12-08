@@ -39,7 +39,7 @@
         <h1>Add a Course</h1>
 
         <!-- COUSE ADDING FORM-->
-        <form action="addingcourse.php" class="container pt-4" method="POST">
+        <form action="addingcourse.php" class="container pt-4" method="POST" enctype="multipart/form-data">
 
             <div class="form-floating mb-3 form-group w-50 mx-auto">
                 <input type="name" class="form-control" id="floatingInput" placeholder="Course name" name="coursename">
@@ -48,6 +48,11 @@
             <div class="row">
 
                 <div class="col-md-6">
+
+                    <div class="form-floating mb-3 form-group">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Description" name="description">
+                        <label for="floatingInput">Description</label>
+                    </div>
 
                     <div class="form-floating mb-3 form-group">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Add Tutorial Title 1" name="title1">
@@ -76,6 +81,11 @@
                 </div>
 
                 <div class="col-md-6">
+
+                    <div class="form-floating mb-3 form-group">
+                        <input type="file" class="form-control" id="floatingInput" placeholder="Image" name="image">
+                        <label for="floatingInput">Image</label>
+                    </div>
 
                     <div class="form-floating mb-3 form-group">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Add Tutorial title 1" name="url1">

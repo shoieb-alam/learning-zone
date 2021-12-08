@@ -55,6 +55,7 @@
     <?php
     if (isset($_POST['coursename'])) {
         $coursename = $_POST["coursename"];
+        $description = $_POST["description"];
         $title1 = $_POST["title1"];
         $url1 = $_POST["url1"];
         $title2 = $_POST["title2"];
@@ -66,7 +67,10 @@
         $title5 = $_POST["title5"];
         $url5 = $_POST["url5"];
 
-        if ($coursename == "" || $title1 == "" || $url1 == "" || $title2 == "" || $url2 == "" || $title3 == "" || $url3 == "" || $title4 == "" || $url4 == "" || $title5 == "" || $url5 == "") {
+        $image = $_FILES['image']['name'];
+        $tmpname = $_FILES['image']['tmp_name'];
+
+        if ($coursename == "" || $description == "" || $image == "" || $title1 == "" || $url1 == "" || $title2 == "" || $url2 == "" || $title3 == "" || $url3 == "" || $title4 == "" || $url4 == "" || $title5 == "" || $url5 == "") {
             echo "
             <div class='modal fade' id='courseAdding' tabindex='-1' aria-labelledby='courseAddingLabel' aria-hidden='true'>
               <div class='modal-dialog modal-dialog-centered'>
@@ -118,7 +122,8 @@
                 } else {
                     echo "";
                 }
-                $sql = "INSERT INTO coursetable VALUES('$coursename','$title1','$url1','$title2','$url2','$title3','$url3','$title4','$url4','$title5','$url5')";
+                move_uploaded_file($tmpname, 'img/courses/' . $image);
+                $sql = "INSERT INTO coursetable VALUES('$coursename', '$description', '$image', '$title1','$url1','$title2','$url2','$title3','$url3','$title4','$url4','$title5','$url5')";
                 $result = mysqli_query($conn, $sql);
 
                 echo "<div class='modal fade' id='courseAdding' tabindex='-1' aria-labelledby='courseAddingLabel' aria-hidden='true'>
