@@ -234,13 +234,14 @@ session_start();
             echo "Connection error";
           } else {
             echo "";
-            $sql = "Select * from coursetable";
+            $sql = "SELECT * FROM coursetable";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
               while ($course = mysqli_fetch_assoc($result)) {
                 echo "        
                   <div class='col'>
                     <div class='card h-100'>
+                    <img src='img/courses/" . $course["image"] . "' class='card-img-top h-50'/>
                     <div class='card-body'>
                       <h2 class='card-title'>" . $course["coursename"] . "</h2>
                       <p class='card-text'>
