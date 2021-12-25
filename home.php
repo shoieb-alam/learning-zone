@@ -21,6 +21,7 @@ session_start();
   <!-- custom css  -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/imagehover.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

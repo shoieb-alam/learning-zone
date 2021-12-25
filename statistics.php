@@ -16,6 +16,7 @@ session_start();
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/fonts.css">
 
   <style>
     /* The bar container */

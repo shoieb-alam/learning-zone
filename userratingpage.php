@@ -21,6 +21,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/fonts.css">
 
   <style>
     a,

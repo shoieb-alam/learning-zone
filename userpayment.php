@@ -13,6 +13,7 @@ session_start();
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/fonts.css">
 
     <style>
         td {
@@ -74,7 +75,7 @@ session_start();
             echo "";
 
             $fname = $_SESSION["username"];
-            $result = mysqli_query($conn, "select * from paymenttable where fname='$fname'")
+            $result = mysqli_query($conn, "SELECT * FROM paymenttable WHERE fname='$fname'")
                 or die("FAILED!!" . mysqli_error($conn));
             $i = 0;
             echo "<table class='w-100 fw-bold'>";
@@ -98,7 +99,7 @@ session_start();
                         <td> 
                         <button class='btn btn-outline-success'>
                             <a class='text-decoration-none text-white fw-bold'
-                            href='courses/" . $row['coursename'] . "/" . $row['coursename'] . "-video.html' target='_blank'>
+                            href='coursesdetails.php?id={$row['id']}' target='_blank'>
                                 View Lectures
                             </a>
                             </button>

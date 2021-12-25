@@ -19,10 +19,11 @@ session_start();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
+  
   <!-- custom css  -->
   <link rel="stylesheet" href="css/courses.css">
   <link rel="stylesheet" href="css/imagehover.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

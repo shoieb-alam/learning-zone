@@ -17,6 +17,7 @@ session_start();
     <link rel="stylesheet" href="../css/bootstrap5.0.2.min.css">
 
     <link rel="stylesheet" href="../css/computer-courses.css">
+    <link rel="stylesheet" href="../css/fonts.css">
 
     <!-- Bengali font  -->
     <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">

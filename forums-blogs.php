@@ -17,6 +17,7 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
 
     <link rel="stylesheet" href="css/computer-courses.css">
+    <link rel="stylesheet" href="css/fonts.css">
 
 </head>
 

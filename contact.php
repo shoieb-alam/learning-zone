@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
 
     <style>
         body {
