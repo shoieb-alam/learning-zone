@@ -30,9 +30,7 @@ echo $coursename;
 
 <body>
 
-
     <h3 class="heading"> <?php echo $coursename ?> Course</h3>
-    <p><?php echo $description; ?></p>
     <div class="container">
 
         <div class="main-iframe">

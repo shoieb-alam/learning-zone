@@ -67,7 +67,7 @@
         $url4 = $_POST["url4"];
         $title5 = $_POST["title5"];
         $url5 = $_POST["url5"];
-
+ 
         $image = $_FILES['image']['name'];
         $tmpname = $_FILES['image']['tmp_name'];
 
@@ -124,7 +124,7 @@
                     echo "";
                 }
                 move_uploaded_file($tmpname, 'img/courses/' . $image);
-                $sql = "INSERT INTO coursetable VALUES('$coursename', '$description', '$image', '$title1','$url1','$title2','$url2','$title3','$url3','$title4','$url4','$title5','$url5')";
+                $sql = "INSERT INTO coursetable(coursename, description, image, title1, url1, title2, url2, title3,url3, title4, url4, title5, url5) VALUES('$coursename', '$description', '$image', '$title1','$url1','$title2','$url2','$title3','$url3','$title4','$url4','$title5','$url5')";
                 $result = mysqli_query($conn, $sql);
 
                 echo "<div class='modal fade' id='courseAdding' tabindex='-1' aria-labelledby='courseAddingLabel' aria-hidden='true'>

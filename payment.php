@@ -45,11 +45,11 @@ session_start();
 
 <body>
 	<?php
-	if (isset($_GET['fname'])) {
-		$fname = $_GET["fname"];
-		$password = $_GET["pass"];
-		$cred = $_GET["cred"];
-		$coursename = $_GET["coursename"];
+	if (isset($_POST['fname'])) {
+		$fname = $_POST["fname"];
+		$password = $_POST["pass"];
+		$cred = $_POST["cred"];
+		$coursename = $_POST["coursename"];
 
 		if ($fname == "" || $password == "" || $cred == "") {
 			echo "        
@@ -89,7 +89,7 @@ session_start();
 			</div>";
 		} else {
 
-			if ($_SERVER['REQUEST_METHOD'] == "GET") //con establish
+			if ($_SERVER['REQUEST_METHOD'] == "POST") //con establish
 			{
 				$localhost = "localhost";
 				$usernamew = "root";
@@ -101,7 +101,7 @@ session_start();
 				} else {
 					echo "";
 				}
-				$result = mysqli_query($conn, "select * from exptable where fname='$fname' and password='$password'")
+				$result = mysqli_query($conn, "SELECT * FROM exptable WHERE fname='$fname' and password='$password'")
 					or die("FAILED!!" . mysqli_error($conn));
 				$row = mysqli_fetch_array($result);
 				if ($row['fname'] == $fname and $row['password'] != $password) {
@@ -129,7 +129,7 @@ session_start();
 				{
 					$_SESSION["username"] = $fname;
 					$paymenttime = date("m/d/y G.i:s<br>", time());
-					$sql = "insert into paymenttable values('$fname','$password','$cred','$coursename','$paymenttime')";
+					$sql = "INSERT INTO paymenttable(fname, `password`, `cred`, `coursename`, `paymenttime`) VALUES('$fname', '$password', '$cred', '$coursename', '$paymenttime')";
 					$result = mysqli_query($conn, $sql);
 
 					echo "

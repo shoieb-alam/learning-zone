@@ -95,7 +95,7 @@ session_start();
                     echo  "
                         <td>" . $i . "</td> 
                 <td class='text-capitalize'>" . $row['coursename'] . "</td>
-                        <td>" . $row['time'] . "</td>
+                        <td>" . $row['paymenttime'] . "</td>
                         <td> 
                         <button class='btn btn-outline-success'>
                             <a class='text-decoration-none text-white fw-bold'

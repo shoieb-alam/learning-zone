@@ -172,7 +172,7 @@ session_start();
                 }
                 echo "<span class='badge' style='background:red;'>$i</span>";
               } else {
-                echo "0 results";
+                echo "";
               }
             }
           }

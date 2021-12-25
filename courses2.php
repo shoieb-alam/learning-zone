@@ -185,7 +185,7 @@ session_start();
         </div>
         <div class="modal-body p-3 m-3">
           <p> Please fill following deatils to procced </p>
-          <form action="payment.php" method="get">
+          <form action="payment.php" method="POST">
 
             <div class="mb-3">
               <input class="form-control" id="loginid" type="text" placeholder="Username" name="fname">
