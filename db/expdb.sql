@@ -3,14 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2021 at 07:09 AM
+-- Generation Time: Dec 27, 2021 at 03:23 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+06:00";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -42,18 +42,6 @@ CREATE TABLE `contacttable` (
 
 INSERT INTO `contacttable` (`fullname`, `email`, `subject`, `message`, `time`) VALUES
 ('newuser', 'newuser@gmail.com', 'increase number of courses', 'about courses', '09/23/20 9.44:12<bSat, 23 Sep 2021 09:44:12 +0200>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.24:02<bSun, 21 Nov 2021 17:24:02 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.24:17<bSun, 21 Nov 2021 17:24:17 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.24:49<bSun, 21 Nov 2021 17:24:49 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.25:48<bSun, 21 Nov 2021 17:25:48 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.25:58<bSun, 21 Nov 2021 17:25:58 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.26:07<bSun, 21 Nov 2021 17:26:07 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.26:44<bSun, 21 Nov 2021 17:26:44 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.26:53<bSun, 21 Nov 2021 17:26:53 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.27:05<bSun, 21 Nov 2021 17:27:05 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.27:17<bSun, 21 Nov 2021 17:27:17 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.27:35<bSun, 21 Nov 2021 17:27:35 +0100>'),
-('Abdur Rahman', 'abd@gmail.com', 'add more courses', 'course', '11/21/21 17.27:46<bSun, 21 Nov 2021 17:27:46 +0100>'),
 ('User1', 'user@gmail.com', 'excellent ', 'features', '11/23/21 7.28:19<bTue, 23 Nov 2021 07:28:19 +0100>'),
 ('User', 'user@gmail.com', 'add cs courses', 'course', '11/29/21 18.44:18<bMon, 29 Nov 2021 18:44:18 +0100>');
 
@@ -73,11 +61,11 @@ CREATE TABLE `counter` (
 --
 
 INSERT INTO `counter` (`visit`, `id`) VALUES
-(295, 0),
-(265, 1),
-(13, 2),
-(16, 3),
-(15, 4),
+(325, 0),
+(293, 1),
+(27, 2),
+(26, 3),
+(27, 4),
 (0, 5);
 
 -- --------------------------------------------------------
@@ -143,9 +131,10 @@ INSERT INTO `exptable` (`fname`, `password`, `email`) VALUES
 ('newaccount', 'newaccount', 'newaccount@gmail.com'),
 ('shoieb', '12345', 'shoieb.ctg@gmail.com'),
 ('user1', '00000', 'user1@gmail.com'),
-('User', '12345', 'user@gmail.com'),
+('User', '11111', 'user@gmail.com'),
 ('ada', 'daa', ''),
-('User2', '11111', 'user2@gmail.com');
+('User2', '11111', 'user2@gmail.com'),
+('student', '22222', 'student@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -167,9 +156,6 @@ CREATE TABLE `paymenttable` (
 --
 
 INSERT INTO `paymenttable` (`id`, `fname`, `password`, `cred`, `coursename`, `paymenttime`) VALUES
-(1, 'User2', '11111', '1111111111', 'SQL', '12/25/21 8.59:02<bSat, 25 Dec 2021 08:59:02 +0100>'),
-(3, 'User2', '11111', '1111111111', 'Networking', '12/26/21 5.54:13<bSun, 26 Dec 2021 05:54:13 +0100>'),
-(4, 'User2', '11111', '1111111111', 'Database', '12/26/21 10.46:01<bSun, 26 Dec 2021 10:46:01 +0100>'),
 (7, 'User2', '11111', '1111111111', 'Python', '12/26/21 14.30:06<bSun, 26 Dec 2021 14:30:06 +0100>'),
 (8, 'User2', '11111', '1111111111', 'Android', '12/26/21 16.40:23<bSun, 26 Dec 2021 16:40:23 +0100>'),
 (9, 'User2', '11111', '1111111111', 'React', '12/26/21 17.22:50<bSun, 26 Dec 2021 17:22:50 +0100>'),
@@ -183,7 +169,9 @@ INSERT INTO `paymenttable` (`id`, `fname`, `password`, `cred`, `coursename`, `pa
 (17, 'User2', '11111', '1111111111', 'Angular', '12/27/21 1.37:21<bMon, 27 Dec 2021 01:37:21 +0100>'),
 (18, 'User2', '11111', '1111111111', 'Vue', '12/27/21 1.38:22<bMon, 27 Dec 2021 01:38:22 +0100>'),
 (19, 'User2', '11111', '1111111111', 'React', '12/27/21 1.54:06<bMon, 27 Dec 2021 01:54:06 +0100>'),
-(20, 'User2', '11111', '1111111111', 'MongoDB', '12/27/21 7.06:44<bMon, 27 Dec 2021 07:06:44 +0600>');
+(20, 'User2', '11111', '1111111111', 'MongoDB', '12/27/21 7.06:44<bMon, 27 Dec 2021 07:06:44 +0600>'),
+(21, 'shoieb', '12345', 'PX98B4AF91', 'React', '12/27/21 12.34:07<bMon, 27 Dec 2021 12:34:07 +0600>'),
+(22, 'shoieb', '12345', 'X83NB49SVA', 'Vue', '12/27/21 12.39:40<bMon, 27 Dec 2021 12:39:40 +0600>');
 
 -- --------------------------------------------------------
 
@@ -219,7 +207,8 @@ INSERT INTO `ratingtable` (`fname`, `ui`, `performance`, `design`, `usablity`) V
 ('User', 1, 5, 5, 5),
 ('User', 7, 8, 7, 9),
 ('User', 10, 10, 10, 10),
-('User', 8, 7, 9, 6);
+('User', 8, 7, 9, 6),
+('shoieb', 9, 7, 9, 8);
 
 -- --------------------------------------------------------
 
@@ -243,7 +232,8 @@ INSERT INTO `reviewtable` (`username`, `comment`, `time`) VALUES
 ('shoieb', 'Nice Platform', '11/23/21 7.52:37<bTue, 23 Nov 2021 07:52:37 +0100>'),
 ('shoieb', 'awesome', '11/23/21 8.59:52<bTue, 23 Nov 2021 08:59:52 +0100>'),
 ('shoieb', 'awesome', '11/23/21 9.00:01<bTue, 23 Nov 2021 09:00:01 +0100>'),
-('User', 'awesome', '11/29/21 18.53:14<bMon, 29 Nov 2021 18:53:14 +0100>');
+('User', 'awesome', '11/29/21 18.53:14<bMon, 29 Nov 2021 18:53:14 +0100>'),
+('shoieb', 'Good Site...', '12/27/21 13.02:17<bMon, 27 Dec 2021 13:02:17 +0600>');
 
 --
 -- Indexes for dumped tables
@@ -269,13 +259,13 @@ ALTER TABLE `paymenttable`
 -- AUTO_INCREMENT for table `coursetable`
 --
 ALTER TABLE `coursetable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `paymenttable`
 --
 ALTER TABLE `paymenttable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

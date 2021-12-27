@@ -12,26 +12,7 @@ session_start();
     <title>Suggestions</title>
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
-
-    <style>
-        body {
-            background: url('img/reviewback.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        .card {
-            position: relative;
-            top: 100px;
-        }
-
-        a,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -75,7 +56,7 @@ session_start();
                 } else {
                     echo "";
                 }
-                $result = mysqli_query($conn, "select * from exptable where fname='$username'")
+                $result = mysqli_query($conn, "SELECT * FROM exptable WHERE fname='$username'")
                     or die("FAILED!!" . mysqli_error($conn));
                 $row = mysqli_fetch_array($result);
                 if ($row['fname'] != $username) {
@@ -102,7 +83,7 @@ session_start();
                     </div>";
                 } else if ($row['fname'] == $username) {
                     $reviewtime = date("m/d/y G.i:s<br>", time());
-                    $sql = "insert into reviewtable values('$username','$comment','$reviewtime')";
+                    $sql = "INSERT INTO reviewtable VALUES('$username','$comment','$reviewtime')";
                     $result = mysqli_query($conn, $sql);
                     echo "
                     <div class='card text-white bg-success mb-3 text-center mx-auto' style='max-width: 18rem;'>

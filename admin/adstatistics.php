@@ -11,12 +11,10 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin > Statistics </title>
 
-  <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="../css/bootstrap5.0.2.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/fonts.css">
 
   <style>
     /* The bar container */
@@ -38,25 +36,7 @@ session_start();
 
 <body class="bg-light">
 
-  <header>
-    <!--Navigation bar-->
-    <nav class="navbar navbar-expand-lg navbar-light navbar bg-secondary">
-      <div class="container">
-        <a class="navbar-brand" href="home.php">Learning Zone</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="btn-trial nav-item">
-              <a class="nav-link rounded-3" href="adminpanel.php">Admin Home</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!--/ Navigation bar-->
-  </header>
+  <?php include('../include/adminheader.inc.php'); ?>
 
   <main class="container">
     <div class="text-center my-3">

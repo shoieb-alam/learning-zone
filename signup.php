@@ -13,24 +13,7 @@ session_start();
     <title>Learning Zone</title>
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
-    <style>
-        body {
-            background: url('img/reviewback.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        .card {
-            position: relative;
-            top: 100px;
-        }
-
-        a,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>

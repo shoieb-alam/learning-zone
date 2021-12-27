@@ -60,89 +60,12 @@ session_start();
     </header>
     <!--/ Navigation bar-->
 
+    <!-- Login/Sign Up Modal -->
 
+    <?php include('../include/loginmodal.inc.php'); ?>
 
-    <!--Modal box-->
-
-    <!-- login modal -->
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-white">
-                    <h5 class="modal-title">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="text-center my-2">Login to start your Session</h6>
-                    <form action="../login.php" method="GET">
-
-                        <!----- username -------------->
-                        <div class="my-4">
-                            <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="fname" />
-
-                        </div>
-
-                        <!-- password  -->
-                        <div class="my-4">
-                            <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="pwd" />
-
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe" />
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
-                        </div>
-                        <div class="modal-footer d-block">
-                            <button type="submit" class="btn btn-success container-fluid">Log in</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ login modal  -->
-
-    <!-- signin modal  -->
-    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-                <div class="modal-header text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="text-center my-2">Sign up to start your Session</h6>
-                    <form method="POST" action="../signup.php">
-
-                        <!----- username -------------->
-                        <div class="my-4">
-                            <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="fname" />
-
-                        </div>
-
-                        <!----- mail -------------->
-                        <div class="my-4">
-                            <input class="form-control" placeholder="E-mail" type="text" autocomplete="off" name="email" />
-                        </div>
-
-                        <!----- password -------------->
-                        <div class="my-4">
-                            <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="pass" />
-                        </div>
-
-                        <div class="modal-footer d-block">
-                            <button type="submit" class="btn btn-success container-fluid">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ signin modal  -->
-
-    <!--/ Modal box-->
-
-
+    
+    <!-- Main Page  -->
     <main class="container text-center my-5">
         <div class="religious-logo d-flex justify-content-center">
 
@@ -154,7 +77,7 @@ session_start();
 
                 <div class="card col-md-5 m-3 py-3 ">
                     <div class="">
-                        <a href="../religious-corner/sirat.html" target="_blank">
+                        <a href="../religious-corner/sirat.php" target="_blank">
                             <img class="card-img-top mx-auto" src="../img/feature/religious/sirat.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">আমরা কেন সীরাহ পাঠ করবো ? </h4>
@@ -194,7 +117,7 @@ session_start();
 
                 <div class="card col-md-5 m-3 py-3 ">
                     <div class="">
-                        <a href="../religious-corner/karbala.html" target="_blank">
+                        <a href="../religious-corner/karbala.php" target="_blank">
                             <img class="card-img-top mx-auto" src="../img/feature/religious/karbala.png" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">কারবালা : প্রতিরোধের প্রথম দৃষ্টান্ত </h4>
@@ -256,7 +179,7 @@ session_start();
 
                 <div class="card col-md-5 m-3 py-3 ">
                     <div class="">
-                        <a href="../religious-corner/khutba.html" target="_blank">
+                        <a href="../religious-corner/khutba.php" target="_blank">
                             <img class="card-img-top mx-auto" src="../img/feature/religious/khutba.png" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">জুমু’আর খুতবা ও আমাদের অবহেলা </h4>
@@ -272,59 +195,12 @@ session_start();
         </section>
     </main>
 
-  <!--Footer-->
-  <footer class="bg-dark text-white">
-    <div class="p-5">
-      <div class="row">
-        <div class="col-md-7">
-          <h1 class="py-3">LEARNING ZONE</h1>
-          <div class="social-media">
-            <a href="#"><img src="../img/icon/fb.png"></a>
-            <a href="#"><img src="../img/icon/insta.png"></a>
-            <a href="#"><img src="../img/icon/tt.png"></a>
-            <a href="#"><img src="../img/icon/linkedin.png"></a>
-            <a href="#"><img src="../img/icon/ytube.png"></a>
-          </div>
-          <br>
-          <br>
-          <p class="rights-text">Copyright © 2021 Created By Nur Mohammod & Shoieb Alam All Rights Reserved.</p>
-          <br>
-          <div class="location d-flex">
-            <img src="../img/icon/location.png">
-            <p> International Islamic University Chittagong (IIUC)
-              <br>
-              Kumira, Chittagong-4000
-            </p>
-          </div>
-          <br>
-          <p><img src="../img/icon/phone.png"> +88-01745-940121
-            <br><img src="../img/icon/mail.png">&nbsp;
-            learningzone@gmail.com
-          </p>
-        </div>
-        <div class="col-md-5 mt-3">
-          <h2 class="mt-5 ">Give Us Suggestions</h2>
-          <div class="border"></div>
-          <br>
-          <p>Your valuable suggestions are always welcomed.</p>
-          <form action="review.php" method="get">
-          <div class="mb-3 w-75 d-grid">
-
-            <input class="form-control me-4 form-control-lg" name="username" type="text" placeholder="Username" aria-label="Username">
-
-            <input class="form-control my-2 form-control-lg" name="comment" type="text" placeholder="Enter Your Suggestion" aria-label="Username">
-            <button name="submit" type="submit" class="btn btn-outline-success fw-bold text-white">Submit</button>
-          </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </footer>
+    <!--Footer-->
+    <?php include('../include/innerfooter.inc.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="../js/bootstrap5.0.2.bundle.min.js"></script>
 </body>
 
 <?php

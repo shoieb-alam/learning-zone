@@ -32,7 +32,6 @@ session_start();
 
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
-
   <script>
     function showMessage(btnId) {
 
@@ -81,99 +80,10 @@ session_start();
     <!--/ Navigation bar-->
   </header>
 
+  <!-- Login/Sign Up Modal -->
 
+  <?php include('include/loginmodal.inc.php'); ?>
 
-  <!--Modal box-->
-
-  <!-- login modal -->
-  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header text-white">
-          <h5 class="modal-title">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h6 class="text-center my-2">Login to start your Session</h6>
-          <form action="login.php" method="GET">
-
-            <div class="my-4">
-              <!----- username -------------->
-              <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="fname" />
-            </div>
-
-
-            <!-- password  -->
-            <div class="my-4">
-
-              <!----- password -------------->
-              <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="pwd" />
-
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="rememberMe" />
-              <label class="form-check-label" for="rememberMe">Remember me</label>
-            </div>
-            <div class="modal-footer d-block">
-              <button type="submit" class="btn btn-success container-fluid">Log in</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ login modal  -->
-
-  <!-- signin modal  -->
-  <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-        <div class="modal-header text-white">
-          <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h6 class="text-center my-2">Sign up to start your Session</h6>
-          <form method="POST" action="signup.php">
-            <div class="my-4">
-              <!-- <label class="form-label">Email Address</label> -->
-              <!-- <input type="email" class="form-control" id="loginid" name="email" placeholder="Email Address" /> -->
-
-              <!----- username -------------->
-              <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="fname" />
-
-            </div>
-            <div class="my-4">
-              <!-- <label class="form-label">Email Address</label> -->
-              <!-- <input type="text" class="form-control" id="username" name="fname" autocomplete="off" placeholder="Username" /> -->
-
-              <!----- mail -------------->
-              <input class="form-control" placeholder="E-mail" type="text" autocomplete="off" name="email" />
-
-
-            </div>
-            <div class="my-4">
-              <!-- <label class="form-label">Password</label> -->
-              <!-- <input type="password" class="form-control" id="password" name="pass" placeholder="Password" /> -->
-
-              <!----- password -------------->
-              <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="pass" />
-
-            </div>
-
-            <div class="modal-footer d-block">
-              <!-- <p class="float-start">Not yet account <a href="#signin">Sign Up</a></p> -->
-              <button type="submit" class="btn btn-success container-fluid">Sign Up</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ signin modal  -->
-
-  <!--/ Modal box-->
 
   <!-- Payment Modal -->
   <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
@@ -185,7 +95,7 @@ session_start();
         </div>
         <div class="modal-body p-3 m-3">
           <p> Please fill following deatils to procced </p>
-          <form action="payment.php" method="POST">
+          <form action="paymentpopup.php" method="POST">
 
             <div class="mb-3">
               <input class="form-control" id="loginid" type="text" placeholder="Username" name="fname">
@@ -213,10 +123,6 @@ session_start();
     </div>
   </div>
   <!-- / Payment Modal -->
-
-  <!--/ Modal box-->
-
-
 
   <!-- Courses  -->
 
@@ -274,56 +180,7 @@ session_start();
 
 
   <!--Footer-->
-  <footer class="bg-dark text-white">
-    <div class="p-5">
-      <div class="row">
-        <div class="col-md-7">
-          <h1 class="py-3">LEARNING ZONE</h1>
-          <div class="social-media">
-            <a href="#"><img src="img/icon/fb.png"></a>
-            <a href="#"><img src="img/icon/insta.png"></a>
-            <a href="#"><img src="img/icon/tt.png"></a>
-            <a href="#"><img src="img/icon/linkedin.png"></a>
-            <a href="#"><img src="img/icon/ytube.png"></a>
-          </div>
-          <br>
-          <br>
-          <p class="rights-text">Copyright © 2021 Created By Nur Mohammod & Shoieb Alam All Rights Reserved.</p>
-          <br>
-          <div class="location d-flex">
-            <img src="img/icon/location.png">
-            <p> International Islamic University Chittagong (IIUC)
-              <br>
-              Kumira, Chittagong-4000
-            </p>
-          </div>
-          <br>
-          <p><img src="img/icon/phone.png"> +88-01745-940121
-            <br><img src="img/icon/mail.png">&nbsp;
-            learningzone@gmail.com
-          </p>
-        </div>
-        <div class="col-md-5 mt-3">
-          <h2 class="mt-5 ">Give Us Suggestions</h2>
-          <div class="border"></div>
-          <br>
-          <p>Your valuable suggestions are always welcomed.</p>
-          <form action="review.php" method="get">
-            <div class="mb-3 w-75 d-grid">
-
-              <input class="form-control me-4 form-control-lg" name="username" type="text" placeholder="Username" aria-label="Username">
-
-              <input class="form-control my-2 form-control-lg" name="comment" type="text" placeholder="Enter Your Suggestion" aria-label="Username">
-              <button name="submit" type="submit" class="btn btn-outline-success fw-bold text-white">Submit</button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </footer>
+  <?php include('include/footer.inc.php'); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

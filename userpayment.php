@@ -14,47 +14,11 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/fonts.css">
-
-    <style>
-        td {
-            width: 15%;
-            text-align: center;
-        }
-
-        .badge {
-            position: absolute;
-            top: 5px;
-            left: 20px;
-            padding: 5px 10px;
-            border-radius: 50%;
-            background-color: red;
-            color: white;
-        }
-    </style>
 </head>
 
 <body class="">
 
-    <header>
-        <!--Navigation bar-->
-        <nav class="navbar navbar-expand-lg navbar-light navbar bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="home.php">Learning Zone</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="btn-trial nav-item">
-                            <a class="nav-link rounded-3" href="myaccount.php"> My Dashboard </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!--/ Navigation bar-->
-
-    </header>
+    <?php include('include/userheader.inc.php'); ?>
 
     <div class="text-center my-3">
         <h1> My Courses </h1>
@@ -74,9 +38,8 @@ session_start();
         } else {
             echo "";
 
-            // $fname = $_SESSION["username"];
-            // $coursename = ["coursename"];
-            $result = mysqli_query($conn, "SELECT * FROM paymenttable, coursetable WHERE paymenttable.coursename = coursetable.coursename")
+            $fname = $_SESSION["username"];
+            $result = mysqli_query($conn, "SELECT * FROM paymenttable, coursetable WHERE fname='$fname' && paymenttable.coursename = coursetable.coursename")
                 or die("FAILED!!" . mysqli_error($conn));
             $i = 0;
             echo "<table class='w-100 fw-bold'>";

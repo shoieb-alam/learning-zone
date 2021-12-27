@@ -1,0 +1,25 @@
+body {
+    background: url('../img/reviewback.jpg') no-repeat;
+    background-size: cover;
+}
+
+.card {
+    position: relative;
+    top: 120px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.modal-dialog {
+    width: 350px;
+    margin: 150px auto;
+}
+
+.modal-header,
+.btn {
+    background-color: #5FCF80;
+}

@@ -1,5 +1,5 @@
 <?php
-require('connect.inc.php');
+require('include/connect.inc.php');
 
 $getid = $_GET['id'];
 

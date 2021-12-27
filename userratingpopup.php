@@ -12,24 +12,8 @@ session_start();
     <title> Suggestions </title>
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
+    <link rel="stylesheet" href="css/popup.css">
 
-    <style>
-        body {
-            background: url('img/reviewback.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        .card {
-            position: relative;
-            top: 100px;
-        }
-
-        a,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,7 +58,7 @@ session_start();
                             We appreciate you for taking out your         valueable time for us 
                         </p>
                         <button class='btn-secondary'>
-                            <a href='http://localhost/Learning-Zone/myaccount.php'> Continue </a>
+                            <a href='http://localhost/Learning-Zone/useraccount.php'> Continue </a>
                         </button>
                     </div>
                 </div>";

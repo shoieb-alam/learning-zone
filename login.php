@@ -13,34 +13,7 @@ session_start();
     <title>Learning Zone</title>
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
-    <style>
-        body {
-            background: url('img/reviewback.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        .card {
-            position: relative;
-            top: 100px;
-        }
-
-        a,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-
-        .modal-dialog {
-            width: 350px;
-            margin: 150px auto;
-        }
-
-        .modal-header,
-        .btn {
-            background-color: #5FCF80;
-        }
-    </style>
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -101,7 +74,7 @@ session_start();
                                 We were waiting for you to check out your account 
                             </p>
                             <button class='btn-success'>
-                                <a href='myaccount.php'>My Account</a>
+                                <a href='useraccount.php'>My Account</a>
                             </button>
                         </div>
                     </div>";
@@ -147,7 +120,7 @@ session_start();
                 </div>
                 <div class="modal-body">
                     <h6 class="text-center my-2">It will take just few seconds</h6>
-                    <form method="GET" action="forgotpassword.php">
+                    <form method="GET" action="forgotpasswordpopup.php">
                         <div class="my-4">
 
                             <!----- username -------------->

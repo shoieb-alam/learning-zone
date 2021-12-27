@@ -12,35 +12,7 @@ session_start();
     <title>Learning Zone</title>
 
     <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-
-    <style>
-        body {
-            background: url('img/reviewback.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        .card {
-            position: relative;
-            top: 120px;
-        }
-
-        a,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-
-        .modal-dialog {
-            width: 350px;
-            margin: 150px auto;
-        }
-
-        .modal-header,
-        .btn {
-            background-color: #5FCF80;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -92,7 +64,7 @@ session_start();
                     or die("FAILED!!" . mysqli_error($conn));
                 $row = mysqli_fetch_array($result);
                 if ($fname == 'admin' and $password == 'admin') {
-                    header("Location: adminpanel.php");
+                    header("Location: ./adminpanel.php");
                     echo "hello Admin";
                 } else {
                     if ($row['fname'] == $fname and $row['email'] == $email) {
