@@ -3,16 +3,25 @@ require('connect.inc.php');
 
 $getid = $_GET['id'];
 
-$sql = "SELECT id, coursename, description, url1 FROM coursetable WHERE id=$getid";
+$sql = "SELECT * FROM coursetable WHERE id=$getid";
 $result = mysqli_query($conn, $sql);
 ?>
 
 <?php
 $course = mysqli_fetch_array($result);
 $coursename = $course['coursename'];
-$description = $course['description'];
-echo $coursename;
+$url1 = $course['url1'];
+$title1 = $course['title1'];
+$url2 = $course['url2'];
+$title2 = $course['title2'];
+$url3 = $course['url3'];
+$title3 = $course['title3'];
+$url4 = $course['url4'];
+$title4 = $course['title4'];
+$url5 = $course['url5'];
+$title5 = $course['title5'];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +33,7 @@ echo $coursename;
         <?php echo $coursename ?>
     </title>
 
-    <link rel="stylesheet" href="./courses/video-youtube.css">
+    <link rel="stylesheet" href="css/video.css">
 
 </head>
 
@@ -35,62 +44,42 @@ echo $coursename;
 
         <div class="main-iframe">
             <div class="iframe">
-                <iframe src="https://www.youtube.com/embed/I11nduRNeT8?rel=0&modestbranding=1&showinfo=0&autoplay=1" allowfullscreen></iframe>
-                <h3 class="title"> 01. Introduction </h3>
+                <iframe src="<?php echo $url1 ?>" allowfullscreen></iframe>
+                <h3 class="title"> 01. <?php echo $title1 ?> </h3>
             </div>
         </div>
 
         <div class="iframe-list">
 
             <div class="vid active">
-                <iframe src="https://www.youtube.com/embed/Z6v1vjIY_PY?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class="title">02. Client Side Vs Server Side Scripting Language</h3>
+                <iframe src="<?php echo $url1 ?>" allowfullscreen></iframe>
+                <h3 class="title">01. <?php echo $title1 ?> </h3>
             </div>
 
             <div class="vid">
-                <iframe src="https://www.youtube.com/embed/gZxVF76CHdc?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class="title" title>03. PHP Setup Bangla</h3>
+                <iframe src="<?php echo $url2 ?>" allowfullscreen></iframe>
+                <h3 class="title" title>02. <?php echo $title2 ?></h3>
+            </div>
+      
+            <div class="vid">
+                <iframe src="<?php echo $url3 ?>" allowfullscreen></iframe>
+                <h3 class="title" title>03. <?php echo $title3 ?></h3>
             </div>
 
             <div class="vid">
-                <iframe src="https://www.youtube.com/embed/8IeDMgXTeaQ?rel=0&modestbranding=1&showinfo=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <h3 class=" title">04. PHP Variable And Syntax </h3>
+                <iframe src="<?php echo $url4 ?>" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h3 class=" title">04. <?php echo $title4 ?> </h3>
             </div>
 
             <div class="vid">
-                <iframe src="https://www.youtube.com/embed/GaBudbPbOlY?rel=0&modestbranding=1&showinfo=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <h3 class=" title">05. PHP Comment </h3>
-            </div>
-
-            <div class="vid">
-                <iframe src="https://www.youtube.com/embed/N-vfOTLmKYM?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class=" title">06. PHP Constants </h3>
-            </div>
-
-            <div class="vid">
-                <iframe src="https://www.youtube.com/embed/VILuoe4dcnw?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class=" title">07. Echo Vs Print </h3>
-            </div>
-
-            <div class="vid">
-                <iframe src="https://www.youtube.com/embed/ek15sBTquKo?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class=" title">08. Data Types </h3>
-            </div>
-
-            <div class="vid">
-                <iframe src="https://www.youtube.com/embed/1_TqGAfPQRM?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class=" title">09. Var_dump </h3>
-            </div>
-
-            <div class="vid">
-                <iframe src="https://www.youtube.com/embed/cS3jK0wzHc0?rel=0&modestbranding=1&showinfo=0" allowfullscreen></iframe>
-                <h3 class=" title">10. PHP Printf </h3>
+                <iframe src="<?php echo $url5 ?>" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h3 class=" title">05. <?php echo $title5 ?> </h3>
             </div>
 
         </div>
 
     </div>
-    <script src="./courses/video-youtube.js"></script>
+    <script src="js/video.js"></script>
 </body>
 
 </html>

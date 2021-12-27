@@ -74,7 +74,7 @@ session_start();
         } else {
             echo "";
 
-            $sql = "Select * from paymenttable order by time desc";
+            $sql = "Select * from paymenttable order by paymenttime desc";
             $result = mysqli_query($conn, $sql);
             echo "
             <table class='w-100 fw-bold'>
@@ -101,7 +101,7 @@ session_start();
                         <td>" . $row["password"] . "</td>
                         <td>" . $row["cred"] . "</td>
                         <td>" . $row["coursename"] . "</td>
-                        <td>" . $row['time'] . "</td>
+                        <td>" . $row['paymenttime'] . "</td>
                     </tr>";
                 }
                 echo "</table>";

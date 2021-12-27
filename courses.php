@@ -19,7 +19,7 @@ session_start();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/bootstrap5.0.2.min.css">
-  
+
   <!-- custom css  -->
   <link rel="stylesheet" href="css/courses.css">
   <link rel="stylesheet" href="css/imagehover.min.css">
@@ -185,7 +185,7 @@ session_start();
         </div>
         <div class="modal-body p-3 m-3">
           <p> Please fill following deatils to procced </p>
-          <form action="payment.php" method="get">
+          <form action="payment.php" method="POST">
 
             <div class="mb-3">
               <input class="form-control" id="loginid" type="text" placeholder="Username" name="fname">
@@ -221,256 +221,55 @@ session_start();
   <!-- Courses  -->
 
   <main class="main bg-light text-center">
-    <div class="m-5 ">
+    <div class="m-5">
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
 
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/python.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Python</h2>
-              <p class="card-text">You need to practice and apply same concept to your examples. This is completely good for beginners.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.1 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="python" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/android.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Android</h2>
-              <p class="card-text">Mobile app development is the act or process by which a mobile app is developed for mobile devices.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="android" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/react.jpg" class="card-img-top h-100" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">React JS</h2>
-              <p class="card-text">React is a free and open-source front-end JavaScript library for building user interfaces or UI components.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold">4.5</small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="react" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/angular.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Angular</h2>
-              <p class="card-text">Develop modern, complex, responsive and scalable web applications with Angular 12.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.3 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-              <span class="fa fa-star-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="angular" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/node.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Node JS</h2>
-              <p class="card-text">Build, test, and launch Node apps, Create Express web servers and APIs, Store data with Mongoose and Deploy to production.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.7 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="nodejs" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/vue.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Vue JS</h2>
-              <p class="card-text">Options and Composition API, Vuex, Vue Router, Creating reusable components, Design Patterns, Front-end Routing.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.2 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="vuejs" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/mongodb.jpg" class="card-img-top h-100" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">MongoDB</h2>
-              <p class="card-text">Know all about MongoDB - be it administrative tasks like creating replica sets or developing web application using MongoDB, How to create and drop databases.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.4 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="mongodb" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/bootstrap.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Bootstrap</h2>
-              <p class="card-text">Design a layout in CSS from scratch. Design the look and feel of an application Mock Reddit’s response from a file.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.7 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="bootstrap" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div id="coursecards" class="col">
-          <div class="card h-100">
-            <img src="img/courses/js.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">JavaScript</h2>
-              <p class="card-text">
-                JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.</p>
-            </div>
-            <div class="ratings">
-              <small class="text-warning fw-bold">4.7</small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="javascript" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/c.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">C Programming</h2>
-              <p class="card-text">C Programming will increase career options. Become a better dev in other languages by learning C. Pointers explained.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.3 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-              <!-- <span class="fa fa-star unchecked"></span> -->
-            </div>
-            <br>
-            <button type="submit" id="c-programming" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/java.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Java</h2>
-              <p class="card-text"> This course we will cover, Datatypes in java programming, Function in Java programming,Loops in Java programming.</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.5 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="java" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/courses/php.jpg" class="card-img-top h-50" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">PHP</h2>
-              <p class="card-text">Build Website from scratch with PHP, Understanding all core concepts and OOP, Understanding PHP7 features, CRUD Operation in core PHP</p>
-            </div>
-            <div>
-              <small class="text-warning fw-bold"> 4.6 </small>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half-o checked"></span>
-            </div>
-            <br>
-            <button type="submit" id="php" onClick='showMessage(this.id)' class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Buy the course</button>
-          </div>
-        </div>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == "GET") {
+          $localhost = "localhost";
+          $usernamew = "root";
+          $passwordw = "";
+          $db = "expdb";
+          $conn = mysqli_connect($localhost, $usernamew, $passwordw, $db);
+          if (!$conn) {
+            echo "Connection error";
+          } else {
+            echo "";
+            $sql = "SELECT * FROM coursetable";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+              while ($course = mysqli_fetch_assoc($result)) {
+                echo "        
+                  <div class='col'>
+                    <div class='card h-100'>
+                    <img src='img/courses/" . $course["image"] . "' class='card-img-top h-50'/>
+                    <div class='card-body'>
+                      <h2 class='card-title'>" . $course["coursename"] . "</h2>
+                      <p class='card-text'>
+                        " . $course["description"] . "
+                      </p>
+                    </div>
+                    <div>
+                      <small class='text-warning fw-bold'> 4.5 </small>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star checked'></span>
+                      <span class='fa fa-star-half-o checked'></span>
+                    </div>
+                    <br>
+                    <button type='submit' id=" . $course["coursename"] . " onClick='showMessage(this.id)' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#paymentModal'        data-bs-whatever='@mdo'>Buy the course</button>
+                    </div>
+                    </div>
+                  ";
+              }
+            }
+          }
+        }
+        ?>
 
       </div>
+    </div>
   </main>
 
 

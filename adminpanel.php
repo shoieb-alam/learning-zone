@@ -29,7 +29,8 @@ session_start();
     }
 
     function display_ct() {
-      document.getElementById('ct').innerHTML = new Date();
+      var today = new Date().toLocaleString();
+      document.getElementById('ct').innerHTML = today;
       display_c();
     }
   </script>
@@ -191,7 +192,7 @@ session_start();
       </div>
     </div>
 
-
+    <!-- counting number displaying  -->
     <div class="col-xs-12 col-sm-9 col-md-9 container">
 
       <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 container mx-auto">
@@ -257,7 +258,7 @@ session_start();
                     }
                     echo $i;
                   } else {
-                    echo "0 results";
+                    echo "0";
                   }
                 }
               }
@@ -292,7 +293,7 @@ session_start();
                     }
                     echo $i;
                   } else {
-                    echo "0 results";
+                    echo "0";
                   }
                 }
               }
@@ -327,7 +328,7 @@ session_start();
                     }
                     echo $i;
                   } else {
-                    echo "0 results";
+                    echo "0";
                   }
                 }
               }

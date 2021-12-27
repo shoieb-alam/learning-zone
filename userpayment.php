@@ -74,12 +74,13 @@ session_start();
         } else {
             echo "";
 
-            $fname = $_SESSION["username"];
-            $result = mysqli_query($conn, "SELECT * FROM paymenttable WHERE fname='$fname'")
+            // $fname = $_SESSION["username"];
+            // $coursename = ["coursename"];
+            $result = mysqli_query($conn, "SELECT * FROM paymenttable, coursetable WHERE paymenttable.coursename = coursetable.coursename")
                 or die("FAILED!!" . mysqli_error($conn));
             $i = 0;
             echo "<table class='w-100 fw-bold'>";
-            echo "<tr >";
+            echo "<tr>";
             echo "
                 <td>Sl No. </td>
                 <td>Course-Name</td>
