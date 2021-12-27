@@ -59,7 +59,7 @@ session_start();
                     echo "";
                 }
                 $time = date("m/d/y G.i:s<br>", time());
-                $sql = "insert into contacttable values('$fullname','$email','$message','$subject','$time')";
+                $sql = "INSERT INTO contacttable VALUES('$fullname','$email','$message','$subject','$time')";
                 $result = mysqli_query($conn, $sql);
 
                 echo "
