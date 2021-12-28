@@ -42,7 +42,7 @@ session_start();
                     </a>
                 </button>
                 <button class='btn-secondary'>
-                    <a href='home.php'> Return Home </a>
+                    <a href='index.php'> Return Home </a>
                 </button>
             </div>
         </div>";
@@ -83,7 +83,7 @@ session_start();
                                 Your Account Password has been updated! 
                             </p>
                             <button class='btn-secondary rounded-pill'>
-                                <a href='home.php'> Return Home </a>
+                                <a href='index.php'> Return Home </a>
                             </button>
                         </div>
                     </div>";
@@ -104,7 +104,7 @@ session_start();
                                 <a href='#' data-bs-target='#forgotpass' data-bs-toggle='modal'>Forgot Password!</a>
                             </button>
                             <button class='btn-secondary'>
-                                <a href='home.php'>Go back!</a>
+                                <a href='index.php'>Go back!</a>
                             </button>
                         </div>
                     </div>";

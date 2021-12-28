@@ -36,10 +36,10 @@ session_start();
                         All inputs are requires to send suggestions! 
                     </p>
                     <button class='btn-success'>
-                        <a href='home.php'>Create Account</a>
+                        <a href='index.php'>Create Account</a>
                     </button>
                     <button class='btn-secondary'>
-                        <a href='home.php'>Go Back!</a>
+                        <a href='index.php'>Go Back!</a>
                     </button>
                 </div>
             </div>";
@@ -74,7 +74,7 @@ session_start();
                                 Only account holders can give suggestions!
                             </p>
                             <button class='btn-success'>
-                                <a href='home.php'>Create Account</a>
+                                <a href='index.php'>Create Account</a>
                             </button>
                             <button class='btn-secondary'>
                                 <a href='http://localhost/Learning-Zone/'>Go Back!</a>
@@ -97,7 +97,7 @@ session_start();
                                 We appreciate you for taking out your valueable time for us 
                             </p>
                             <button class='btn-secondary'>
-                                <a href='home.php'>Continue</a>
+                                <a href='index.php'>Continue</a>
                             </button>
                         </div>
                     </div>";

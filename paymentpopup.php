@@ -136,7 +136,7 @@ session_start();
 							Only account holders can buy the courses! 
 							</p>
 							<button class='btn-success'>
-								<a href='home.php'>Create Account</a>
+								<a href='index.php'>Create Account</a>
 							</button>
 							<button class='btn-secondary'>
 								<a href='courses.php'>Go Back!</a>

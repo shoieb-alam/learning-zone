@@ -37,7 +37,7 @@ session_start();
                         All inputs are necessary  to create new account
                     </p>
                     <button class='btn-secondary'>
-                        <a href='home.php'>Go Back</a>
+                        <a href='index.php'>Go Back</a>
                     </button>
                 </div>
             </div>";
@@ -72,7 +72,7 @@ session_start();
                                 Alreday exists please choose another username to create new account
                             </p>
                             <button class='btn-secondary'>
-                                <a href='home.php'>Go Back</a>
+                                <a href='index.php'>Go Back</a>
                             </button>
                         </div>
                     </div>";
@@ -92,7 +92,7 @@ session_start();
                                 Hello welcome to the family of learners 
                             </p>
                             <button class='btn-success'>
-                                <a href='home.php'>Go Home!</a>
+                                <a href='index.php'>Go Home!</a>
                             </button>
                         </div>
                     </div>";
