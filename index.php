@@ -57,12 +57,21 @@ session_start();
               <a class="nav-link" href="#contactus">Contact Us</a>
             </li>
 
-            <li class="nav-item">
+            <?php
+            if (isset($_SESSION["username"])) {
+              echo '<li class="btn-trial nav-item">
+              <a class="nav-link" href="logout.php">Logout </a>
+            </li>';
+            } else {
+              echo '<li class="nav-item">
               <a class="nav-link" href="#" data-bs-target="#login" data-bs-toggle="modal">Log in</a>
             </li>
             <li class="btn-trial nav-item">
               <a class="nav-link" href="#" data-bs-target="#signin" data-bs-toggle="modal">Sign Up</a>
-            </li>
+            </li>'; 
+            }
+            ?>
+            
           </ul>
         </div>
       </div>
